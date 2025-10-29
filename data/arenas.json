@@ -1,0 +1,23 @@
+[
+  { "id": 1, "nome": "Arena 1 - Acampamento dos Goblins", "icone": "arena1.svg" },
+  { "id": 2, "nome": "Arena 2 - Jaula de Ossos", "icone": "arena2.svg" },
+  { "id": 3, "nome": "Arena 3 - Vale dos Bárbaros", "icone": "arena3.svg" },
+  { "id": 4, "nome": "Arena 4 - Pico do P.E.K.K.A", "icone": "arena4.svg" },
+  { "id": 5, "nome": "Arena 5 - Oficina de Feitiços", "icone": "arena5.svg" },
+  { "id": 6, "nome": "Arena 6 - Oficina do Construtor", "icone": "arena6.svg" },
+  { "id": 7, "nome": "Arena 7 - Jardim Real", "icone": "arena7.svg" },
+  { "id": 8, "nome": "Arena 8 - Gelo Congelado", "icone": "arena8.svg" },
+  { "id": 9, "nome": "Arena 9 - Selva dos Esqueletos", "icone": "arena9.svg" },
+  { "id": 10, "nome": "Arena 10 - Caldeirão de Hog", "icone": "arena10.svg" },
+  { "id": 11, "nome": "Arena 11 - Pista de Eletricidade", "icone": "arena11.svg" },
+  { "id": 12, "nome": "Arena 12 - Lago Lendário", "icone": "arena12.svg" },
+  { "id": 13, "nome": "Arena 13 - Caminho da Eletrocução", "icone": "arena13.svg" },
+  { "id": 14, "nome": "Arena 14 - Pico do Rascunho", "icone": "arena14.svg" },
+  { "id": 15, "nome": "Arena 15 - Campeões", "icone": "arena15.svg" },
+  { "id": 16, "nome": "Arena 16 - Portão do Mestre", "icone": "arena16.svg" },
+  { "id": 17, "nome": "Arena 17 - Estádio do Titã", "icone": "arena17.svg" },
+  { "id": 18, "nome": "Arena 18 - Panteão", "icone": "arena18.svg" },
+  { "id": 19, "nome": "Arena 19 - Salão Infinito", "icone": "arena19.svg" },
+  { "id": 20, "nome": "Arena 20 - Câmara Divina", "icone": "arena20.svg" },
+  { "id": 21, "nome": "Arena 21 - Olimpo", "icone": "arena21.svg" }
+]

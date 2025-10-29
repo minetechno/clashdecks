@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo completo de personagens e cartas de Clash Royale. Veja estatísticas, sinergias e counters de todas as cartas.">
+  <meta name="theme-color" content="#2d5a7b">
+  <title>Personagens - ClashDecks</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo" aria-label="ClashDecks - Página inicial">
+        <img src="../assets/img/logo.svg" alt="ClashDecks" class="header__logo-img">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="header__nav">
+          <li>
+            <a href="../index.html" class="header__nav-link">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">
+              Personagens
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Catálogo de Personagens</h1>
+        <p class="hero__subtitle">Explore todas as cartas com estatísticas, sinergias e counters</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Filtros -->
+      <section class="filters" aria-labelledby="filtros-titulo">
+        <h2 id="filtros-titulo" class="filters__title">
+          <img src="../assets/img/ui-filter.svg" alt="" aria-hidden="true" width="24" height="24">
+          Filtros
+        </h2>
+        <div class="filters__grid">
+          <!-- Filtro de Tipo -->
+          <div class="filter-group">
+            <label for="filter-tipo" class="filter-group__label">Tipo</label>
+            <select id="filter-tipo" class="filter-group__select">
+              <option value="">Todos os Tipos</option>
+              <option value="Tropa">Tropa</option>
+              <option value="Feitiço">Feitiço</option>
+              <option value="Construção">Construção</option>
+            </select>
+          </div>
+
+          <!-- Filtro de Elixir -->
+          <div class="filter-group">
+            <label for="filter-elixir" class="filter-group__label">Custo de Elixir</label>
+            <select id="filter-elixir" class="filter-group__select">
+              <option value="">Qualquer Custo</option>
+              <option value="1">1 Elixir</option>
+              <option value="2">2 Elixir</option>
+              <option value="3">3 Elixir</option>
+              <option value="4">4 Elixir</option>
+              <option value="5">5 Elixir</option>
+              <option value="6">6 Elixir</option>
+              <option value="7">7 Elixir</option>
+              <option value="8">8+ Elixir</option>
+            </select>
+          </div>
+
+          <!-- Filtro de Raridade -->
+          <div class="filter-group">
+            <label for="filter-raridade" class="filter-group__label">Raridade</label>
+            <select id="filter-raridade" class="filter-group__select">
+              <option value="">Todas as Raridades</option>
+              <option value="Comum">Comum</option>
+              <option value="Raro">Raro</option>
+              <option value="Épico">Épico</option>
+              <option value="Lendário">Lendário</option>
+            </select>
+          </div>
+
+          <!-- Filtro de Arena -->
+          <div class="filter-group">
+            <label for="filter-arena" class="filter-group__label">Arena de Desbloqueio</label>
+            <select id="filter-arena" class="filter-group__select">
+              <option value="">Todas as Arenas</option>
+              <option value="1">Arena 1</option>
+              <option value="2">Arena 2</option>
+              <option value="3">Arena 3</option>
+              <option value="4">Arena 4</option>
+              <option value="5">Arena 5</option>
+              <option value="6">Arena 6</option>
+              <option value="7">Arena 7</option>
+              <option value="8">Arena 8</option>
+              <option value="9">Arena 9</option>
+              <option value="10">Arena 10</option>
+              <option value="11">Arena 11</option>
+              <option value="12">Arena 12</option>
+              <option value="13">Arena 13+</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Busca -->
+        <div class="filter-group mt-xl">
+          <label for="search-personagens" class="filter-group__label">Buscar Personagem</label>
+          <input
+            type="search"
+            id="search-personagens"
+            class="filter-group__input"
+            placeholder="Digite o nome da carta..."
+            aria-label="Buscar personagem por nome"
+          >
+        </div>
+      </section>
+
+      <!-- Grade de Personagens -->
+      <section aria-labelledby="personagens-titulo">
+        <h2 id="personagens-titulo" class="text-center mb-lg">Todas as Cartas</h2>
+        <div id="personagens-grid" class="personagens-grid" role="list">
+          <!-- Personagens serão carregados aqui via JavaScript -->
+          <div class="loading" role="status">
+            <span class="sr-only">Carregando personagens</span>
+            Carregando personagens
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        ClashDecks - Catálogo de Decks de Clash Royale<br>
+        Projeto educacional. SVGs e código são originais.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal de Detalhes do Personagem -->
+  <div id="personagem-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal">
+      <header class="modal__header">
+        <h3 id="modal-title" class="modal__title">Detalhes do Personagem</h3>
+        <button type="button" class="modal__close btn--icon" aria-label="Fechar modal">
+          <img src="../assets/img/ui-close.svg" alt="">
+        </button>
+      </header>
+      <div id="modal-content" class="modal__content">
+        <!-- Conteúdo será injetado via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de Toasts -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true">
+    <!-- Toasts serão adicionados aqui via JavaScript -->
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

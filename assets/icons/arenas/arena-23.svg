@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="cosmic-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#311b92;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a148c;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="cosmic-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#9c27b0;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#4a148c;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base do escudo -->
+  <path d="M50 10 L20 25 L20 50 Q20 75 50 90 Q80 75 80 50 L80 25 Z"
+        fill="url(#cosmic-grad)" stroke="#6a1b9a" stroke-width="2"/>
+
+  <!-- Borda brilhante -->
+  <path d="M50 15 L25 28 L25 50 Q25 72 50 85 Q75 72 75 50 L75 28 Z"
+        fill="none" stroke="#ba68c8" stroke-width="1" opacity="0.5"/>
+
+  <!-- Galáxia central -->
+  <ellipse cx="50" cy="50" rx="18" ry="12" fill="url(#cosmic-glow)" opacity="0.7"/>
+  <ellipse cx="50" cy="50" rx="12" ry="18" fill="url(#cosmic-glow)" opacity="0.5"/>
+
+  <!-- Planeta central -->
+  <circle cx="50" cy="50" r="10" fill="#ce93d8"/>
+  <ellipse cx="50" cy="50" rx="15" ry="3" fill="none" stroke="#ab47bc" stroke-width="1.5" opacity="0.8"/>
+
+  <!-- Estrelas cósmicas -->
+  <g fill="#ffffff">
+    <circle cx="30" cy="30" r="1.5" opacity="0.9"/>
+    <circle cx="70" cy="30" r="1.5" opacity="0.9"/>
+    <circle cx="35" cy="45" r="1" opacity="0.7"/>
+    <circle cx="65" cy="45" r="1" opacity="0.7"/>
+    <circle cx="30" cy="65" r="1.5" opacity="0.9"/>
+    <circle cx="70" cy="65" r="1.5" opacity="0.9"/>
+    <circle cx="40" cy="75" r="1" opacity="0.6"/>
+    <circle cx="60" cy="25" r="1" opacity="0.6"/>
+  </g>
+
+  <!-- Constelação -->
+  <g stroke="#ba68c8" stroke-width="0.5" opacity="0.4" fill="none">
+    <polyline points="30,30 35,45 30,65"/>
+    <polyline points="70,30 65,45 70,65"/>
+  </g>
+
+  <!-- Orbe superior -->
+  <circle cx="50" cy="25" r="4" fill="#9c27b0" opacity="0.7"/>
+  <circle cx="50" cy="25" r="2" fill="#e1bee7"/>
+</svg>

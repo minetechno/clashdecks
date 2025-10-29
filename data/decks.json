@@ -1,0 +1,569 @@
+[
+  {
+    "id": "deck_a1_of1",
+    "nome": "Rush Inicial",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 1,
+    "cartas": ["goblins", "arqueiras", "cavaleiro", "mosqueteira", "gigante", "flechas", "bola-de-fogo", "zap"],
+    "notas": "Pressão constante com Gigante e suporte de arqueiras. Use feitiços para limpar defesas.",
+    "mediaElixir": 3.6
+  },
+  {
+    "id": "deck_a1_de1",
+    "nome": "Defesa Sólida",
+    "tipo": "Defensivo",
+    "arenaAlvo": 1,
+    "cartas": ["arqueiras", "cavaleiro", "mosqueteira", "canhao", "flechas", "bola-de-fogo", "zap", "goblins"],
+    "notas": "Defenda e converta em contra-ataque. Canhão puxa tanques.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a1_hi1",
+    "nome": "Equilíbrio Inicial",
+    "tipo": "Híbrido",
+    "arenaAlvo": 1,
+    "cartas": ["gigante", "mosqueteira", "arqueiras", "cavaleiro", "canhao", "flechas", "zap", "bola-de-fogo"],
+    "notas": "Defesa forte e pushes controlados com Gigante.",
+    "mediaElixir": 3.5
+  },
+  {
+    "id": "deck_a2_of1",
+    "nome": "Mini Tank Rush",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 2,
+    "cartas": ["mini-pekka", "goblins", "arqueiras", "gigante", "esqueletos", "zap", "flechas", "bola-de-fogo"],
+    "notas": "Mini P.E.K.K.A como defesa e contra-ataque. Ciclo rápido.",
+    "mediaElixir": 3.0
+  },
+  {
+    "id": "deck_a2_de1",
+    "nome": "Controle Básico",
+    "tipo": "Defensivo",
+    "arenaAlvo": 2,
+    "cartas": ["valquiria", "mosqueteira", "mini-pekka", "canhao", "esqueletos", "zap", "flechas", "raio"],
+    "notas": "Valquíria elimina enxames. Raio para tropas de suporte.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a2_hi1",
+    "nome": "Tank Valquíria",
+    "tipo": "Híbrido",
+    "arenaAlvo": 2,
+    "cartas": ["gigante", "valquiria", "mosqueteira", "mini-pekka", "esqueletos", "zap", "flechas", "bola-de-fogo"],
+    "notas": "Valquíria protege o Gigante de enxames.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a3_of1",
+    "nome": "Beatdown Mago",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 3,
+    "cartas": ["gigante", "mago", "mosqueteira", "mini-pekka", "esqueletos", "zap", "bola-de-fogo", "foguete"],
+    "notas": "Mago limpa enxames atrás do Gigante. Foguete para finalizar.",
+    "mediaElixir": 4.0
+  },
+  {
+    "id": "deck_a3_de1",
+    "nome": "Gelo Defensivo",
+    "tipo": "Defensivo",
+    "arenaAlvo": 3,
+    "cartas": ["golem-de-gelo", "mosqueteira", "valquiria", "canhao", "esqueletos", "zap", "flechas", "foguete"],
+    "notas": "Golem de Gelo desacelera pushes. Foguete para torres.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a3_hi1",
+    "nome": "Controle Mago",
+    "tipo": "Híbrido",
+    "arenaAlvo": 3,
+    "cartas": ["cavaleiro", "mago", "mosqueteira", "golem-de-gelo", "mini-pekka", "zap", "bola-de-fogo", "foguete"],
+    "notas": "Defesa forte com Mago e contra-ataques calculados.",
+    "mediaElixir": 3.9
+  },
+  {
+    "id": "deck_a4_of1",
+    "nome": "P.E.K.K.A Bridge Spam",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 4,
+    "cartas": ["pekka", "balao", "goblins", "esqueletos", "espirito", "zap", "bola-de-fogo", "foguete"],
+    "notas": "Pressão dupla de pistas com P.E.K.K.A e Balão.",
+    "mediaElixir": 3.9
+  },
+  {
+    "id": "deck_a4_de1",
+    "nome": "Torre Inferno Control",
+    "tipo": "Defensivo",
+    "arenaAlvo": 4,
+    "cartas": ["torre-inferno", "mosqueteira", "valquiria", "bruxa", "esqueletos", "zap", "flechas", "foguete"],
+    "notas": "Torre Inferno derrete tanques. Bruxa invoca esqueletos.",
+    "mediaElixir": 4.0
+  },
+  {
+    "id": "deck_a4_hi1",
+    "nome": "Balão Freeze",
+    "tipo": "Híbrido",
+    "arenaAlvo": 4,
+    "cartas": ["balao", "golem-de-gelo", "mosqueteira", "tesla", "esqueletos", "espirito", "zap", "bola-de-fogo"],
+    "notas": "Balão com Golem de Gelo. Tesla defende.",
+    "mediaElixir": 3.5
+  },
+  {
+    "id": "deck_a5_of1",
+    "nome": "Golem Beatdown",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 5,
+    "cartas": ["golem", "mago", "bruxa", "mini-pekka", "esqueletos", "espirito-de-gelo", "zap", "veneno"],
+    "notas": "Golem tanque principal. Mago e Bruxa para suporte.",
+    "mediaElixir": 4.5
+  },
+  {
+    "id": "deck_a5_de1",
+    "nome": "Controle Veneno",
+    "tipo": "Defensivo",
+    "arenaAlvo": 5,
+    "cartas": ["torre-inferno", "mosqueteira", "valquiria", "golem-de-gelo", "esqueletos", "espirito-de-gelo", "zap", "veneno"],
+    "notas": "Veneno controla áreas. Torre Inferno para tanques.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a5_hi1",
+    "nome": "Golem Control",
+    "tipo": "Híbrido",
+    "arenaAlvo": 5,
+    "cartas": ["golem", "mosqueteira", "mini-pekka", "tesla", "esqueletos", "espirito-de-gelo", "zap", "veneno"],
+    "notas": "Golem com defesa forte. Tesla para ar.",
+    "mediaElixir": 4.0
+  },
+  {
+    "id": "deck_a6_of1",
+    "nome": "Corredor 2.6",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 6,
+    "cartas": ["corredor", "mosqueteira", "golem-de-gelo", "canhao", "espirito-de-gelo", "tronco", "bola-de-fogo", "esqueletos"],
+    "notas": "Pressão constante e ciclo rápido. Corredor protegido.",
+    "mediaElixir": 2.6
+  },
+  {
+    "id": "deck_a6_de1",
+    "nome": "Lenhador Tank",
+    "tipo": "Defensivo",
+    "arenaAlvo": 6,
+    "cartas": ["lenhador", "valquiria", "mosqueteira", "torre-inferno", "esqueletos", "espirito-de-gelo", "tronco", "veneno"],
+    "notas": "Defesa sólida. Lenhador acelera contra-ataques.",
+    "mediaElixir": 3.6
+  },
+  {
+    "id": "deck_a6_hi1",
+    "nome": "Log Bait Light",
+    "tipo": "Híbrido",
+    "arenaAlvo": 6,
+    "cartas": ["barril-de-goblins", "cavaleiro", "mosqueteira", "montador-de-javali", "esqueletos", "espirito-de-gelo", "tronco", "bola-de-fogo"],
+    "notas": "Isca de feitiços com Barril e Montador.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a7_of1",
+    "nome": "Princesa Bait",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 7,
+    "cartas": ["barril-de-goblins", "princesa", "cavaleiro", "montador-de-javali", "esqueletos", "espirito-de-gelo", "tronco", "foguete"],
+    "notas": "Pressão com Princesa. Foguete para finalizar.",
+    "mediaElixir": 3.0
+  },
+  {
+    "id": "deck_a7_de1",
+    "nome": "Controle Princesa",
+    "tipo": "Defensivo",
+    "arenaAlvo": 7,
+    "cartas": ["princesa", "cavaleiro", "mosqueteira", "torre-inferno", "esqueletos", "tronco", "foguete", "bola-de-fogo"],
+    "notas": "Princesa pressiona de longe. Torre Inferno defende.",
+    "mediaElixir": 3.6
+  },
+  {
+    "id": "deck_a7_hi1",
+    "nome": "Hog Princesa",
+    "tipo": "Híbrido",
+    "arenaAlvo": 7,
+    "cartas": ["corredor", "princesa", "mosqueteira", "golem-de-gelo", "canhao", "esqueletos", "tronco", "bola-de-fogo"],
+    "notas": "Corredor + Princesa. Defesa equilibrada.",
+    "mediaElixir": 2.9
+  },
+  {
+    "id": "deck_a8_of1",
+    "nome": "Mineiro Control",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 8,
+    "cartas": ["mineiro", "veneno", "valquiria", "mosqueteira", "esqueletos", "espirito-de-gelo", "tronco", "foguete"],
+    "notas": "Mineiro + Veneno. Pressão chip damage.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a8_de1",
+    "nome": "Mago de Gelo Controle",
+    "tipo": "Defensivo",
+    "arenaAlvo": 8,
+    "cartas": ["mago-de-gelo", "tornado", "torre-inferno", "mosqueteira", "esqueletos", "espirito-de-gelo", "tronco", "foguete"],
+    "notas": "Mago de Gelo + Tornado. Controle total.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a8_hi1",
+    "nome": "Hog Ice Wizard",
+    "tipo": "Híbrido",
+    "arenaAlvo": 8,
+    "cartas": ["corredor", "mago-de-gelo", "mosqueteira", "canhao", "esqueletos", "espirito-de-gelo", "tronco", "bola-de-fogo"],
+    "notas": "Corredor com Mago de Gelo. Defesa forte.",
+    "mediaElixir": 2.9
+  },
+  {
+    "id": "deck_a9_of1",
+    "nome": "Goblin Gang Bait",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 9,
+    "cartas": ["barril-de-goblins", "gangue-de-goblins", "princesa", "cavaleiro", "esqueletos", "espirito", "tronco", "foguete"],
+    "notas": "Múltiplas iscas de feitiço. Foguete para torres.",
+    "mediaElixir": 2.9
+  },
+  {
+    "id": "deck_a9_de1",
+    "nome": "Jaula Defensiva",
+    "tipo": "Defensivo",
+    "arenaAlvo": 9,
+    "cartas": ["jaula-do-goblin", "mosqueteira", "valquiria", "mini-pekka", "gangue-de-goblins", "esqueletos", "tronco", "foguete"],
+    "notas": "Jaula puxa tropas. Gangue para DPS emergencial.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a9_hi1",
+    "nome": "Hog Gang",
+    "tipo": "Híbrido",
+    "arenaAlvo": 9,
+    "cartas": ["corredor", "gangue-de-goblins", "mosqueteira", "golem-de-gelo", "jaula-do-goblin", "esqueletos", "tronco", "bola-de-fogo"],
+    "notas": "Corredor com suporte de Gangue. Defesa equilibrada.",
+    "mediaElixir": 2.9
+  },
+  {
+    "id": "deck_a10_of1",
+    "nome": "Log Bait Clássico",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 10,
+    "cartas": ["barril-de-goblins", "princesa", "cavaleiro", "gangue-de-goblins", "espirito", "tornado", "foguete", "tronco"],
+    "notas": "Força psicológica com iscas de feitiço. Foguete cicla.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a10_de1",
+    "nome": "Cura Swarm",
+    "tipo": "Defensivo",
+    "arenaAlvo": 10,
+    "cartas": ["mosqueteira", "valquiria", "gangue-de-goblins", "canhao", "cura", "esqueletos", "tronco", "foguete"],
+    "notas": "Cura mantém tropas vivas. Defesa forte.",
+    "mediaElixir": 3.0
+  },
+  {
+    "id": "deck_a10_hi1",
+    "nome": "Mineiro Bait",
+    "tipo": "Híbrido",
+    "arenaAlvo": 10,
+    "cartas": ["mineiro", "barril-de-goblins", "gangue-de-goblins", "valquiria", "esqueletos", "cura", "tronco", "foguete"],
+    "notas": "Mineiro + Barril. Cura suporta defesas.",
+    "mediaElixir": 3.0
+  },
+  {
+    "id": "deck_a11_of1",
+    "nome": "E-Dragon Beatdown",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 11,
+    "cartas": ["golem", "dragao-eletrico", "bruxa", "mini-pekka", "esqueletos", "zap", "veneno", "tornado"],
+    "notas": "Golem + Dragão Elétrico. Tornado agrupa inimigos.",
+    "mediaElixir": 4.6
+  },
+  {
+    "id": "deck_a11_de1",
+    "nome": "Zappies Control",
+    "tipo": "Defensivo",
+    "arenaAlvo": 11,
+    "cartas": ["eletrocutadores", "torre-inferno", "mosqueteira", "valquiria", "esqueletos", "zap", "veneno", "tornado"],
+    "notas": "Eletrocutadores stunam. Torre Inferno derrete tanques.",
+    "mediaElixir": 3.9
+  },
+  {
+    "id": "deck_a11_hi1",
+    "nome": "E-Dragon Cycle",
+    "tipo": "Híbrido",
+    "arenaAlvo": 11,
+    "cartas": ["dragao-eletrico", "eletrocutadores", "mosqueteira", "mini-pekka", "esqueletos", "espirito-de-gelo", "zap", "veneno"],
+    "notas": "Dragão Elétrico limpa enxames. Ciclo rápido.",
+    "mediaElixir": 3.6
+  },
+  {
+    "id": "deck_a12_of1",
+    "nome": "E-Golem Rush",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 12,
+    "cartas": ["gigante-elixir", "eletrocutadores", "dragao-eletrico", "mini-pekka", "esqueletos", "zap", "tornado", "veneno"],
+    "notas": "Gigante de Elixir gera recursos. Pressão agressiva.",
+    "mediaElixir": 4.4
+  },
+  {
+    "id": "deck_a12_de1",
+    "nome": "E-Golem Controle",
+    "tipo": "Defensivo",
+    "arenaAlvo": 12,
+    "cartas": ["gigante-elixir", "eletrocutadores", "tornado", "jaula-do-goblin", "barbaros-de-elite", "cura", "zap", "veneno"],
+    "notas": "Defende e converte em contra-ataque forte.",
+    "mediaElixir": 4.3
+  },
+  {
+    "id": "deck_a12_hi1",
+    "nome": "E-Barbs Bridge",
+    "tipo": "Híbrido",
+    "arenaAlvo": 12,
+    "cartas": ["barbaros-de-elite", "eletrocutadores", "mosqueteira", "mini-pekka", "esqueletos", "cura", "zap", "bola-de-fogo"],
+    "notas": "Bárbaros de Elite + Cura. Pressão de ponte.",
+    "mediaElixir": 3.9
+  },
+  {
+    "id": "deck_a13_of1",
+    "nome": "Pekka Ram",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 13,
+    "cartas": ["pekka", "eletrocutadores", "mago", "mineiro", "esqueletos", "zap", "bola-de-fogo", "veneno"],
+    "notas": "P.E.K.K.A + Eletrocutadores. Pressão dupla de pista.",
+    "mediaElixir": 4.3
+  },
+  {
+    "id": "deck_a13_de1",
+    "nome": "Tornado Control",
+    "tipo": "Defensivo",
+    "arenaAlvo": 13,
+    "cartas": ["torre-inferno", "mosqueteira", "valquiria", "mago-de-gelo", "tornado", "esqueletos", "tronco", "foguete"],
+    "notas": "Tornado + Torre Inferno. Controle absoluto.",
+    "mediaElixir": 3.6
+  },
+  {
+    "id": "deck_a13_hi1",
+    "nome": "Graveyard Control",
+    "tipo": "Híbrido",
+    "arenaAlvo": 13,
+    "cartas": ["cavaleiro", "mosqueteira", "mago-de-gelo", "tornado", "jaula-do-goblin", "esqueletos", "veneno", "tronco"],
+    "notas": "Controle com Tornado. Veneno para suporte.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a14_of1",
+    "nome": "Lava Hound Clone",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 14,
+    "cartas": ["balao", "dragao-eletrico", "mineiro", "esqueletos", "espirito", "zap", "bola-de-fogo", "veneno"],
+    "notas": "Pressão aérea forte. Balão + Dragão Elétrico.",
+    "mediaElixir": 3.6
+  },
+  {
+    "id": "deck_a14_de1",
+    "nome": "Defensive Beatdown",
+    "tipo": "Defensivo",
+    "arenaAlvo": 14,
+    "cartas": ["golem", "bruxa", "torre-inferno", "mosqueteira", "esqueletos", "tornado", "veneno", "zap"],
+    "notas": "Defende com Torre Inferno. Converte em Golem push.",
+    "mediaElixir": 4.4
+  },
+  {
+    "id": "deck_a14_hi1",
+    "nome": "Bridge Spam Pro",
+    "tipo": "Híbrido",
+    "arenaAlvo": 14,
+    "cartas": ["pekka", "eletrocutadores", "mosqueteira", "mineiro", "esqueletos", "zap", "bola-de-fogo", "veneno"],
+    "notas": "Pressão constante de ponte. P.E.K.K.A defende.",
+    "mediaElixir": 4.0
+  },
+  {
+    "id": "deck_a15_of1",
+    "nome": "Royal Giant Cycle",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 15,
+    "cartas": ["mosqueteira", "valquiria", "mini-pekka", "esqueletos", "espirito-de-gelo", "tronco", "bola-de-fogo", "raio"],
+    "notas": "Ciclo rápido e pressão. Raio para suporte.",
+    "mediaElixir": 3.5
+  },
+  {
+    "id": "deck_a15_de1",
+    "nome": "X-Bow Defense",
+    "tipo": "Defensivo",
+    "arenaAlvo": 15,
+    "cartas": ["tesla", "mosqueteira", "mago-de-gelo", "cavaleiro", "esqueletos", "espirito-de-gelo", "tronco", "foguete"],
+    "notas": "Tesla + Mosqueteira defende. Foguete finaliza.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a15_hi1",
+    "nome": "Miner Poison Control",
+    "tipo": "Híbrido",
+    "arenaAlvo": 15,
+    "cartas": ["mineiro", "valquiria", "mosqueteira", "tesla", "esqueletos", "espirito-de-gelo", "veneno", "tronco"],
+    "notas": "Mineiro + Veneno. Controle com Tesla.",
+    "mediaElixir": 3.3
+  },
+  {
+    "id": "deck_a16_of1",
+    "nome": "Lumberjack Balloon",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 16,
+    "cartas": ["balao", "lenhador", "mago", "mineiro", "esqueletos", "zap", "bola-de-fogo", "veneno"],
+    "notas": "Lenhador + Balão. Raiva acelera o Balão.",
+    "mediaElixir": 4.0
+  },
+  {
+    "id": "deck_a16_de1",
+    "nome": "Mega Knight Control",
+    "tipo": "Defensivo",
+    "arenaAlvo": 16,
+    "cartas": ["pekka", "eletrocutadores", "mosqueteira", "mago-de-gelo", "tornado", "esqueletos", "zap", "veneno"],
+    "notas": "P.E.K.K.A defende pushes. Tornado agrupa.",
+    "mediaElixir": 4.1
+  },
+  {
+    "id": "deck_a16_hi1",
+    "nome": "Golem Night Witch",
+    "tipo": "Híbrido",
+    "arenaAlvo": 16,
+    "cartas": ["golem", "bruxa", "dragao-eletrico", "mini-pekka", "esqueletos", "zap", "tornado", "veneno"],
+    "notas": "Golem + Bruxa. Dragão Elétrico limpa.",
+    "mediaElixir": 4.6
+  },
+  {
+    "id": "deck_a17_of1",
+    "nome": "Three Musketeers",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 17,
+    "cartas": ["mosqueteira", "cavaleiro", "mineiro", "goblins", "esqueletos", "espirito-de-gelo", "zap", "bola-de-fogo"],
+    "notas": "Múltiplas Mosqueteiras. Pressão dupla de pista.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a17_de1",
+    "nome": "Rocket Cycle",
+    "tipo": "Defensivo",
+    "arenaAlvo": 17,
+    "cartas": ["tesla", "mosqueteira", "cavaleiro", "mago-de-gelo", "tornado", "esqueletos", "tronco", "foguete"],
+    "notas": "Defesa absoluta. Foguete cicla para torres.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a17_hi1",
+    "nome": "Hog EQ",
+    "tipo": "Híbrido",
+    "arenaAlvo": 17,
+    "cartas": ["corredor", "valquiria", "mosqueteira", "canhao", "esqueletos", "espirito-de-gelo", "tronco", "bola-de-fogo"],
+    "notas": "Corredor + Bola de Fogo. Defesa sólida.",
+    "mediaElixir": 3.0
+  },
+  {
+    "id": "deck_a18_of1",
+    "nome": "E-Giant Beatdown",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 18,
+    "cartas": ["gigante-elixir", "dragao-eletrico", "eletrocutadores", "tornado", "barbaros-de-elite", "zap", "cura", "veneno"],
+    "notas": "Gigante de Elixir tanque. Dragão limpa.",
+    "mediaElixir": 4.8
+  },
+  {
+    "id": "deck_a18_de1",
+    "nome": "Pekka BS Defense",
+    "tipo": "Defensivo",
+    "arenaAlvo": 18,
+    "cartas": ["pekka", "eletrocutadores", "mosqueteira", "mago-de-gelo", "mineiro", "esqueletos", "zap", "veneno"],
+    "notas": "P.E.K.K.A elimina tanques. Mineiro pressiona.",
+    "mediaElixir": 4.0
+  },
+  {
+    "id": "deck_a18_hi1",
+    "nome": "Royal Hogs Cycle",
+    "tipo": "Híbrido",
+    "arenaAlvo": 18,
+    "cartas": ["mosqueteira", "valquiria", "mini-pekka", "goblins", "esqueletos", "espirito-de-gelo", "zap", "bola-de-fogo"],
+    "notas": "Ciclo rápido com múltiplas win conditions.",
+    "mediaElixir": 3.3
+  },
+  {
+    "id": "deck_a19_of1",
+    "nome": "Goblin Drill Bait",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 19,
+    "cartas": ["barril-de-goblins", "gangue-de-goblins", "princesa", "cavaleiro", "mineiro", "esqueletos", "tronco", "foguete"],
+    "notas": "Múltiplas iscas. Foguete finaliza.",
+    "mediaElixir": 3.1
+  },
+  {
+    "id": "deck_a19_de1",
+    "nome": "Ice Bow",
+    "tipo": "Defensivo",
+    "arenaAlvo": 19,
+    "cartas": ["tesla", "mosqueteira", "mago-de-gelo", "cavaleiro", "tornado", "esqueletos", "tronco", "foguete"],
+    "notas": "Defesa impenetrável. Foguete para torres.",
+    "mediaElixir": 3.4
+  },
+  {
+    "id": "deck_a19_hi1",
+    "nome": "Lava Miner",
+    "tipo": "Híbrido",
+    "arenaAlvo": 19,
+    "cartas": ["balao", "mineiro", "dragao-eletrico", "mosqueteira", "esqueletos", "zap", "bola-de-fogo", "veneno"],
+    "notas": "Balão + Mineiro. Pressão aérea e terrestre.",
+    "mediaElixir": 3.9
+  },
+  {
+    "id": "deck_a20_of1",
+    "nome": "Electro Giant Mirror",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 20,
+    "cartas": ["gigante-elixir", "dragao-eletrico", "eletrocutadores", "tornado", "barbaros-de-elite", "zap", "cura", "raio"],
+    "notas": "Gigante de Elixir dobrado com Mirror. Pressão massiva.",
+    "mediaElixir": 4.9
+  },
+  {
+    "id": "deck_a20_de1",
+    "nome": "Ultimate Defense",
+    "tipo": "Defensivo",
+    "arenaAlvo": 20,
+    "cartas": ["pekka", "torre-inferno", "mosqueteira", "mago-de-gelo", "tornado", "esqueletos", "zap", "foguete"],
+    "notas": "Duas defesas anti-tanque. Controle absoluto.",
+    "mediaElixir": 4.1
+  },
+  {
+    "id": "deck_a20_hi1",
+    "nome": "Golem Clone",
+    "tipo": "Híbrido",
+    "arenaAlvo": 20,
+    "cartas": ["golem", "bruxa", "dragao-eletrico", "mago", "mini-pekka", "zap", "tornado", "veneno"],
+    "notas": "Golem push massivo. Tornado + Veneno controla.",
+    "mediaElixir": 4.8
+  },
+  {
+    "id": "deck_a21_of1",
+    "nome": "Triple Spell Bait",
+    "tipo": "Ofensivo",
+    "arenaAlvo": 21,
+    "cartas": ["barril-de-goblins", "gangue-de-goblins", "princesa", "mineiro", "esqueletos", "espirito", "tronco", "foguete"],
+    "notas": "Iscas infinitas. Pressão psicológica máxima.",
+    "mediaElixir": 2.9
+  },
+  {
+    "id": "deck_a21_de1",
+    "nome": "Immortal Defense",
+    "tipo": "Defensivo",
+    "arenaAlvo": 21,
+    "cartas": ["pekka", "torre-inferno", "mosqueteira", "mago-de-gelo", "eletrocutadores", "tornado", "zap", "foguete"],
+    "notas": "Defesa impenetrável. Foguete cicla para vitória.",
+    "mediaElixir": 4.4
+  },
+  {
+    "id": "deck_a21_hi1",
+    "nome": "Ultimate Beatdown",
+    "tipo": "Híbrido",
+    "arenaAlvo": 21,
+    "cartas": ["golem", "gigante-elixir", "dragao-eletrico", "bruxa", "tornado", "zap", "veneno", "raio"],
+    "notas": "Dois tanques. Pressão imparável.",
+    "mediaElixir": 5.4
+  }
+]

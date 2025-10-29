@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f4c430;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#d4a017;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <text x="5" y="45" font-family="Arial Black, sans-serif" font-size="42" font-weight="900" fill="url(#logoGrad)" stroke="#2d5a7b" stroke-width="2">
+    ClashDecks
+  </text>
+  <path d="M 10 8 L 18 8 L 15 14 L 20 14 L 12 24 L 14 17 L 10 17 Z" fill="#4a90e2" opacity="0.8"/>
+  <path d="M 225 10 L 233 10 L 233 18 L 225 18 Z M 227 12 L 231 12 L 231 16 L 227 16 Z" fill="#f4c430" opacity="0.9"/>
+</svg>

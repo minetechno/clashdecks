@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <path d="M 10 54 L 18 10 L 22 12 L 14 56 Z" fill="#8a6a4a"/>
+  <polygon points="18,10 16,6 20,6" fill="#6a4a2a"/>
+  <rect x="14" y="30" width="2" height="3" fill="#c08060" transform="rotate(-75 15 31)"/>
+  <path d="M 28 50 L 36 14 L 40 16 L 32 52 Z" fill="#8a6a4a"/>
+  <polygon points="36,14 34,10 38,10" fill="#6a4a2a"/>
+  <rect x="32" y="28" width="2" height="3" fill="#c08060" transform="rotate(-75 33 29)"/>
+  <path d="M 46 54 L 54 18 L 58 20 L 50 56 Z" fill="#8a6a4a"/>
+  <polygon points="54,18 52,14 56,14" fill="#6a4a2a"/>
+  <rect x="50" y="32" width="2" height="3" fill="#c08060" transform="rotate(-75 51 33)"/>
+</svg>

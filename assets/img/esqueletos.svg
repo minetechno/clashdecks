@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <ellipse cx="28" cy="54" rx="12" ry="4" fill="#4a4a4a" opacity="0.3"/>
+  <ellipse cx="38" cy="54" rx="12" ry="4" fill="#4a4a4a" opacity="0.3"/>
+  <circle cx="26" cy="28" r="7" fill="#e8e8e8"/>
+  <rect x="22" y="34" width="8" height="14" fill="#d8d8d8" rx="2"/>
+  <rect x="18" y="38" width="4" height="10" fill="#c8c8c8" rx="1"/>
+  <rect x="30" y="38" width="4" height="10" fill="#c8c8c8" rx="1"/>
+  <ellipse cx="24" cy="27" rx="1.5" ry="2" fill="#4a4a4a"/>
+  <ellipse cx="28" cy="27" rx="1.5" ry="2" fill="#4a4a4a"/>
+  <circle cx="38" cy="30" r="7" fill="#e8e8e8"/>
+  <rect x="34" y="36" width="8" height="14" fill="#d8d8d8" rx="2"/>
+  <rect x="30" y="40" width="4" height="10" fill="#c8c8c8" rx="1"/>
+  <rect x="42" y="40" width="4" height="10" fill="#c8c8c8" rx="1"/>
+  <ellipse cx="36" cy="29" rx="1.5" ry="2" fill="#4a4a4a"/>
+  <ellipse cx="40" cy="29" rx="1.5" ry="2" fill="#4a4a4a"/>
+</svg>

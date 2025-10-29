@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClashDecks - Encontre os melhores decks de Clash Royale organizados por arena, dificuldade e estilo de jogo. Decks ofensivos, defensivos e híbridos para todas as arenas.">
+  <meta name="theme-color" content="#2d5a7b">
+  <title>ClashDecks - Os Melhores Decks de Clash Royale</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo" aria-label="ClashDecks - Página inicial">
+        <img src="assets/img/logo.svg" alt="ClashDecks" class="header__logo-img">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="header__nav">
+          <li>
+            <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="personagens/index.html" class="header__nav-link">
+              Personagens
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Encontre o deck perfeito</h1>
+        <p class="hero__subtitle">Decks organizados por arena, dificuldade e estilo de jogo</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Filtros -->
+      <section class="filters" aria-labelledby="filtros-titulo">
+        <h2 id="filtros-titulo" class="filters__title">
+          <img src="assets/img/ui-filter.svg" alt="" aria-hidden="true" width="24" height="24">
+          Filtros
+        </h2>
+        <div class="filters__grid">
+          <!-- Filtro de Tipo -->
+          <div class="filter-group">
+            <label for="filter-tipo" class="filter-group__label">Tipo de Deck</label>
+            <div class="filter-group__buttons" role="group" aria-label="Filtrar por tipo de deck">
+              <button type="button" class="filter-btn" data-filter="tipo" data-value="Todos" aria-pressed="true">
+                Todos
+              </button>
+              <button type="button" class="filter-btn" data-filter="tipo" data-value="Ofensivo" aria-pressed="false">
+                Ofensivo
+              </button>
+              <button type="button" class="filter-btn" data-filter="tipo" data-value="Defensivo" aria-pressed="false">
+                Defensivo
+              </button>
+              <button type="button" class="filter-btn" data-filter="tipo" data-value="Híbrido" aria-pressed="false">
+                Híbrido
+              </button>
+            </div>
+          </div>
+
+          <!-- Filtro de Arena -->
+          <div class="filter-group">
+            <label for="filter-arena" class="filter-group__label">Arena</label>
+            <select id="filter-arena" class="filter-group__select">
+              <option value="">Todas as Arenas</option>
+              <option value="1">Arena 1</option>
+              <option value="2">Arena 2</option>
+              <option value="3">Arena 3</option>
+              <option value="4">Arena 4</option>
+              <option value="5">Arena 5</option>
+              <option value="6">Arena 6</option>
+              <option value="7">Arena 7</option>
+              <option value="8">Arena 8</option>
+              <option value="9">Arena 9</option>
+              <option value="10">Arena 10</option>
+              <option value="11">Arena 11</option>
+              <option value="12">Arena 12</option>
+              <option value="13">Arena 13</option>
+              <option value="14">Arena 14</option>
+              <option value="15">Arena 15</option>
+              <option value="16">Arena 16</option>
+              <option value="17">Arena 17</option>
+              <option value="18">Arena 18</option>
+              <option value="19">Arena 19</option>
+              <option value="20">Arena 20</option>
+              <option value="21">Arena 21</option>
+            </select>
+          </div>
+
+          <!-- Filtro de Dificuldade -->
+          <div class="filter-group">
+            <label for="filter-dificuldade" class="filter-group__label">Dificuldade</label>
+            <div class="filter-group__buttons" role="group" aria-label="Filtrar por dificuldade">
+              <button type="button" class="filter-btn" data-filter="dificuldade" data-value="Todos" aria-pressed="true">
+                Todos
+              </button>
+              <button type="button" class="filter-btn" data-filter="dificuldade" data-value="Facil" aria-pressed="false">
+                Fácil
+              </button>
+              <button type="button" class="filter-btn" data-filter="dificuldade" data-value="Medio" aria-pressed="false">
+                Médio
+              </button>
+              <button type="button" class="filter-btn" data-filter="dificuldade" data-value="Dificil" aria-pressed="false">
+                Difícil
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Busca -->
+        <div class="filter-group mt-xl">
+          <label for="search-decks" class="filter-group__label">Buscar Deck</label>
+          <input
+            type="search"
+            id="search-decks"
+            class="filter-group__input"
+            placeholder="Digite o nome do deck..."
+            aria-label="Buscar deck por nome"
+          >
+        </div>
+      </section>
+
+      <!-- Grade de Arenas -->
+      <section aria-labelledby="arenas-titulo">
+        <h2 id="arenas-titulo" class="text-center mb-lg">Arenas</h2>
+        <div id="arenas-grid" class="arenas-grid" role="list">
+          <!-- Arenas serão carregadas aqui via JavaScript -->
+          <div class="loading" role="status">
+            <span class="sr-only">Carregando arenas</span>
+            Carregando arenas
+          </div>
+        </div>
+      </section>
+
+      <!-- Grade de Decks -->
+      <section aria-labelledby="decks-titulo">
+        <h2 id="decks-titulo" class="text-center mb-lg mt-xl">Decks Disponíveis</h2>
+        <div id="decks-grid" class="decks-grid" role="list">
+          <!-- Decks serão carregados aqui via JavaScript -->
+          <div class="loading" role="status">
+            <span class="sr-only">Carregando decks</span>
+            Carregando decks
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        ClashDecks - Catálogo de Decks de Clash Royale<br>
+        Projeto educacional. SVGs e código são originais.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal de Detalhes do Deck -->
+  <div id="deck-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal">
+      <header class="modal__header">
+        <h3 id="modal-title" class="modal__title">Detalhes do Deck</h3>
+        <button type="button" class="modal__close btn--icon" aria-label="Fechar modal">
+          <img src="assets/img/ui-close.svg" alt="">
+        </button>
+      </header>
+      <div id="modal-content" class="modal__content">
+        <!-- Conteúdo será injetado via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de Toasts -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true">
+    <!-- Toasts serão adicionados aqui via JavaScript -->
+  </div>
+
+  <!-- JavaScript -->
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
