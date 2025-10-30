@@ -891,3 +891,147 @@ button:focus {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===================================
+   BAÚS - Estilos para página de baús
+   =================================== */
+
+/* Grid de baús */
+.baus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Card de baú */
+.bau-card {
+  background: var(--cor-card);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.bau-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bau-card__image {
+  margin-bottom: 1rem;
+}
+
+.bau-card__icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.bau-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bau-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cor-texto);
+  margin: 0;
+}
+
+.bau-card__raridade {
+  margin: 0.5rem 0;
+}
+
+.bau-card__info {
+  font-size: 0.9rem;
+  color: var(--cor-texto-secundario);
+  margin: 0;
+}
+
+/* Raridade badges */
+.raridade {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.raridade--comum {
+  background: #808080;
+  color: #ffffff;
+}
+
+.raridade--raro {
+  background: #4169e1;
+  color: #ffffff;
+}
+
+.raridade--épico {
+  background: #9370db;
+  color: #ffffff;
+}
+
+.raridade--lendário {
+  background: #ffd700;
+  color: #2a3a4a;
+}
+
+/* Modal específico para baús */
+.modal__bau-icon {
+  max-width: 150px;
+  height: auto;
+}
+
+.recompensas-group {
+  margin-bottom: 1rem;
+}
+
+.recompensas-group h5 {
+  font-size: 1rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 0.5rem;
+}
+
+.recompensas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recompensas-list li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.recompensas-list li:last-child {
+  border-bottom: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .baus-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .bau-card {
+    padding: 1.25rem;
+  }
+
+  .bau-card__icon {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .baus-grid {
+    grid-template-columns: 1fr;
+  }
+}

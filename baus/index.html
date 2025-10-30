@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Baús do Clash Royale - Conheça todos os baús e suas recompensas">
+  <meta name="theme-color" content="#2d5a7b">
+  <title>Baús - ClashDecks</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo" aria-label="ClashDecks - Página inicial">
+        <img src="../assets/img/logo.svg" alt="ClashDecks" class="header__logo-img">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="header__nav">
+          <li>
+            <a href="../index.html" class="header__nav-link">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../personagens/index.html" class="header__nav-link">
+              Personagens
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">
+              Baús
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Baús do Clash Royale</h1>
+        <p class="hero__subtitle">Conheça todos os baús e suas recompensas</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Filtros -->
+      <section class="filters" aria-labelledby="filtros-titulo">
+        <h2 id="filtros-titulo" class="filters__title">
+          <img src="../assets/img/ui-filter.svg" alt="" aria-hidden="true" width="24" height="24">
+          Filtros
+        </h2>
+        <div class="filters__grid">
+          <!-- Filtro de Raridade -->
+          <div class="filter-group">
+            <label for="filter-raridade" class="filter-group__label">Raridade</label>
+            <div class="filter-group__buttons" role="group" aria-label="Filtrar por raridade">
+              <button type="button" class="filter-btn" data-filter="raridade" data-value="Todos" aria-pressed="true">
+                Todos
+              </button>
+              <button type="button" class="filter-btn" data-filter="raridade" data-value="Comum" aria-pressed="false">
+                Comum
+              </button>
+              <button type="button" class="filter-btn" data-filter="raridade" data-value="Raro" aria-pressed="false">
+                Raro
+              </button>
+              <button type="button" class="filter-btn" data-filter="raridade" data-value="Épico" aria-pressed="false">
+                Épico
+              </button>
+              <button type="button" class="filter-btn" data-filter="raridade" data-value="Lendário" aria-pressed="false">
+                Lendário
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Busca -->
+        <div class="filter-group mt-xl">
+          <label for="search-baus" class="filter-group__label">Buscar Baú</label>
+          <input
+            type="search"
+            id="search-baus"
+            class="filter-group__input"
+            placeholder="Digite o nome do baú..."
+            aria-label="Buscar baú por nome"
+          >
+        </div>
+      </section>
+
+      <!-- Grade de Baús -->
+      <section aria-labelledby="baus-titulo">
+        <h2 id="baus-titulo" class="text-center mb-lg mt-xl">Baús Disponíveis</h2>
+        <div id="baus-grid" class="baus-grid" role="list">
+          <!-- Baús serão carregados aqui via JavaScript -->
+          <div class="loading" role="status">
+            <span class="sr-only">Carregando baús</span>
+            Carregando baús...
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        ClashDecks - Catálogo de Decks de Clash Royale<br>
+        Projeto educacional. SVGs e código são originais.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal de Detalhes do Baú -->
+  <div id="bau-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal">
+      <header class="modal__header">
+        <h3 id="modal-title" class="modal__title">Detalhes do Baú</h3>
+        <button type="button" class="modal__close btn--icon" aria-label="Fechar modal">
+          <img src="../assets/img/ui-close.svg" alt="">
+        </button>
+      </header>
+      <div id="modal-content" class="modal__content">
+        <!-- Conteúdo será injetado via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Container de Toasts -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true">
+    <!-- Toasts serão adicionados aqui via JavaScript -->
+  </div>
+
+  <!-- JavaScript -->
+  <script src="../assets/js/baus.js"></script>
+</body>
+</html>
