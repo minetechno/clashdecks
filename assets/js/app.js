@@ -42,7 +42,7 @@ const STATE = {
 function calcularDificuldade(arenaAlvo) {
   if (arenaAlvo >= 1 && arenaAlvo <= 8) return 'Facil';
   if (arenaAlvo >= 9 && arenaAlvo <= 11) return 'Medio';
-  if (arenaAlvo >= 12 && arenaAlvo <= 21) return 'Dificil';
+  if (arenaAlvo >= 12 && arenaAlvo <= 24) return 'Dificil';
   return 'Desconhecido';
 }
 

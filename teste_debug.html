@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Debug - ClashDecks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .success { color: green; }
+    .error { color: red; }
+    .info { color: blue; }
+    pre {
+      background: #f0f0f0;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #2d5a7b;
+      padding-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Teste de Debug - ClashDecks</h1>
+
+  <div class="section">
+    <h2>1. Teste de API - Arenas</h2>
+    <div id="arenas-result">Carregando...</div>
+  </div>
+
+  <div class="section">
+    <h2>2. Teste de API - Decks</h2>
+    <div id="decks-result">Carregando...</div>
+  </div>
+
+  <div class="section">
+    <h2>3. Teste de API - Personagens</h2>
+    <div id="personagens-result">Carregando...</div>
+  </div>
+
+  <div class="section">
+    <h2>4. Teste de Filtros</h2>
+    <div id="filtros-result">Carregando...</div>
+  </div>
+
+  <script>
+    // Função auxiliar para mostrar resultado
+    function mostrarResultado(elementId, html) {
+      document.getElementById(elementId).innerHTML = html;
+    }
+
+    // Teste 1: API de Arenas
+    fetch('api/arenas.php')
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        const total = data.length;
+        const ultimas = data.slice(-3);
+
+        let html = `<p class="success">✓ API funcionando</p>`;
+        html += `<p><strong>Total:</strong> ${total} arenas</p>`;
+        html += `<p><strong>Últimas 3 arenas:</strong></p>`;
+        html += `<ul>`;
+        ultimas.forEach(arena => {
+          html += `<li>Arena ${arena.id}: ${arena.nome} (${arena.icone})</li>`;
+        });
+        html += `</ul>`;
+        html += `<details><summary>Ver JSON completo (últimas 3)</summary><pre>${JSON.stringify(ultimas, null, 2)}</pre></details>`;
+
+        mostrarResultado('arenas-result', html);
+      })
+      .catch(error => {
+        mostrarResultado('arenas-result', `<p class="error">✗ ERRO: ${error.message}</p>`);
+      });
+
+    // Teste 2: API de Decks
+    fetch('api/decks.php')
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        const total = data.length;
+
+        // Contar por dificuldade
+        const facil = data.filter(d => d.arenaAlvo >= 1 && d.arenaAlvo <= 8).length;
+        const medio = data.filter(d => d.arenaAlvo >= 9 && d.arenaAlvo <= 11).length;
+        const dificil = data.filter(d => d.arenaAlvo >= 12 && d.arenaAlvo <= 24).length;
+
+        // Decks das arenas 22-24
+        const decks2224 = data.filter(d => d.arenaAlvo >= 22);
+
+        let html = `<p class="success">✓ API funcionando</p>`;
+        html += `<p><strong>Total:</strong> ${total} decks</p>`;
+        html += `<p><strong>Por dificuldade:</strong></p>`;
+        html += `<ul>`;
+        html += `<li>Fácil (1-8): ${facil} decks</li>`;
+        html += `<li>Médio (9-11): ${medio} decks</li>`;
+        html += `<li>Difícil (12-24): ${dificil} decks</li>`;
+        html += `</ul>`;
+        html += `<p><strong>Decks arenas 22-24:</strong> ${decks2224.length}</p>`;
+        html += `<ul>`;
+        decks2224.forEach(deck => {
+          html += `<li>Arena ${deck.arenaAlvo}: ${deck.nome} (${deck.tipo}) - ${deck.cartas.length} cartas</li>`;
+        });
+        html += `</ul>`;
+        html += `<details><summary>Ver exemplo de deck completo</summary><pre>${JSON.stringify(decks2224[0], null, 2)}</pre></details>`;
+
+        mostrarResultado('decks-result', html);
+      })
+      .catch(error => {
+        mostrarResultado('decks-result', `<p class="error">✗ ERRO: ${error.message}</p>`);
+      });
+
+    // Teste 3: API de Personagens
+    fetch('api/personagens.php')
+      .then(response => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json();
+      })
+      .then(data => {
+        const total = data.length;
+        const exemplo = data[0];
+
+        let html = `<p class="success">✓ API funcionando</p>`;
+        html += `<p><strong>Total:</strong> ${total} personagens</p>`;
+        html += `<p><strong>Exemplo:</strong> ${exemplo.nome} (${exemplo.elixir} elixir, ${exemplo.tipo})</p>`;
+        html += `<details><summary>Ver JSON do exemplo</summary><pre>${JSON.stringify(exemplo, null, 2)}</pre></details>`;
+
+        mostrarResultado('personagens-result', html);
+      })
+      .catch(error => {
+        mostrarResultado('personagens-result', `<p class="error">✗ ERRO: ${error.message}</p>`);
+      });
+
+    // Teste 4: Filtros
+    Promise.all([
+      fetch('api/decks.php?dificuldade=Dificil').then(r => r.json()),
+      fetch('api/decks.php?arena=22').then(r => r.json()),
+      fetch('api/decks.php?tipo=Ofensivo').then(r => r.json())
+    ])
+      .then(([dificil, arena22, ofensivo]) => {
+        let html = `<p class="success">✓ Filtros funcionando</p>`;
+        html += `<ul>`;
+        html += `<li><strong>Filtro dificuldade=Dificil:</strong> ${dificil.length} decks</li>`;
+        html += `<li><strong>Filtro arena=22:</strong> ${arena22.length} decks</li>`;
+        html += `<li><strong>Filtro tipo=Ofensivo:</strong> ${ofensivo.length} decks</li>`;
+        html += `</ul>`;
+        html += `<p class="info">Decks da Arena 22:</p>`;
+        html += `<ul>`;
+        arena22.forEach(deck => {
+          html += `<li>${deck.nome} (${deck.tipo})</li>`;
+        });
+        html += `</ul>`;
+
+        mostrarResultado('filtros-result', html);
+      })
+      .catch(error => {
+        mostrarResultado('filtros-result', `<p class="error">✗ ERRO: ${error.message}</p>`);
+      });
+  </script>
+</body>
+</html>
