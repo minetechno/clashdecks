@@ -1,12 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <ellipse cx="32" cy="56" rx="26" ry="6" fill="#4a4a4a" opacity="0.3"/>
-  <rect x="22" y="28" width="20" height="28" fill="#4a4a4a" rx="3"/>
-  <circle cx="32" cy="20" r="10" fill="#5a5a5a"/>
-  <rect cx="26" cy="18" rx="3" ry="4" fill="#d04060"/>
-  <rect cx="38" cy="18" rx="3" ry="4" fill="#d04060"/>
-  <rect x="18" y="32" width="8" height="20" fill="#3a3a3a" rx="2"/>
-  <rect x="38" y="32" width="8" height="20" fill="#3a3a3a" rx="2"/>
-  <path d="M 44 24 L 54 20 L 52 26 L 56 24 L 50 30 L 48 26" fill="#c0c0c0"/>
-  <rect x="28" y="36" width="8" height="3" fill="#8060a0"/>
-  <rect x="28" y="42" width="8" height="3" fill="#8060a0"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pekkaArmor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4B4B4B"/>
+      <stop offset="50%" style="stop-color:#2F2F2F"/>
+      <stop offset="100%" style="stop-color:#1A1A1A"/>
+    </linearGradient>
+    <radialGradient id="pekkaglow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FF1493;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#FF1493;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="shadowPekka"><feDropShadow dx="3" dy="5" stdDeviation="4" flood-opacity="0.6"/></filter>
+  </defs>
+  <ellipse cx="32" cy="58" rx="22" ry="4" fill="#000" opacity="0.4"/>
+  <rect x="20" y="28" width="24" height="28" rx="4" fill="url(#pekkaArmor)" filter="url(#shadowPekka)"/>
+  <rect x="22" y="30" width="20" height="24" fill="#3A3A3A"/>
+  <ellipse cx="32" cy="20" rx="10" ry="12" fill="url(#pekkaArmor)" filter="url(#shadowPekka)"/>
+  <circle cx="28" cy="18" r="3" fill="#FF1493" filter="url(#shadowPekka)"/>
+  <circle cx="36" cy="18" r="3" fill="#FF1493" filter="url(#shadowPekka)"/>
+  <circle cx="28" cy="18" r="2" fill="#FFF"/>
+  <circle cx="36" cy="18" r="2" fill="#FFF"/>
+  <rect x="28" y="22" width="8" height="4" fill="#3A3A3A"/>
+  <rect x="12" y="32" width="10" height="20" rx="3" fill="url(#pekkaArmor)" filter="url(#shadowPekka)"/>
+  <rect x="42" y="32" width="10" height="20" rx="3" fill="url(#pekkaArmor)" filter="url(#shadowPekka)"/>
+  <ellipse cx="32" cy="42" r="8" fill="url(#pekkaglow)"/>
+  <path d="M 50 35 L 56 30 L 52 38 L 56 34" fill="#C0C0C0" filter="url(#shadowPekka)"/>
+  <line x1="50" y1="35" x2="56" y2="30" stroke="#87CEEB" stroke-width="2"/>
 </svg>

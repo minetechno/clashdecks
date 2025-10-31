@@ -1,12 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <ellipse cx="32" cy="56" rx="28" ry="6" fill="#4a4a4a" opacity="0.3"/>
-  <rect x="20" y="30" width="24" height="26" fill="#c08040" rx="4"/>
-  <circle cx="32" cy="20" r="11" fill="#f4c8a4"/>
-  <path d="M 22 14 L 20 22 L 26 18 Z" fill="#8a5a2a"/>
-  <path d="M 42 14 L 44 22 L 38 18 Z" fill="#8a5a2a"/>
-  <ellipse cx="28" cy="18" rx="2" ry="3" fill="#4a2a2a"/>
-  <ellipse cx="36" cy="18" rx="2" ry="3" fill="#4a2a2a"/>
-  <path d="M 26 24 Q 32 26 38 24" stroke="#c08060" fill="none" stroke-width="2"/>
-  <rect x="16" y="34" width="8" height="18" fill="#a06030" rx="2"/>
-  <rect x="40" y="34" width="8" height="18" fill="#a06030" rx="2"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skinGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD7A8"/>
+      <stop offset="100%" style="stop-color:#E6B88A"/>
+    </linearGradient>
+    <linearGradient id="armorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513"/>
+      <stop offset="50%" style="stop-color:#654321"/>
+      <stop offset="100%" style="stop-color:#4A2810"/>
+    </linearGradient>
+    <filter id="shadow3d"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.5"/></filter>
+  </defs>
+  <ellipse cx="32" cy="56" rx="20" ry="5" fill="#000" opacity="0.3"/>
+  <rect x="22" y="36" width="20" height="20" rx="3" fill="url(#armorGrad)" filter="url(#shadow3d)"/>
+  <circle cx="32" cy="22" r="12" fill="url(#skinGrad)" filter="url(#shadow3d)"/>
+  <circle cx="28" cy="20" r="2" fill="#000"/>
+  <circle cx="36" cy="20" r="2" fill="#000"/>
+  <path d="M 28 26 Q 32 28 36 26" stroke="#000" stroke-width="2" fill="none"/>
+  <ellipse cx="32" cy="16" rx="10" ry="4" fill="#8B4513"/>
+  <rect x="18" y="40" width="8" height="16" rx="2" fill="url(#armorGrad)" filter="url(#shadow3d)"/>
+  <rect x="38" y="40" width="8" height="16" rx="2" fill="url(#armorGrad)" filter="url(#shadow3d)"/>
+  <circle cx="32" cy="42" r="5" fill="#FFD700" filter="url(#shadow3d)"/>
+  <circle cx="32" cy="42" r="3" fill="#FFA500"/>
+  <rect x="26" y="48" width="3" height="3" fill="#FFD700"/>
+  <rect x="35" y="48" width="3" height="3" fill="#FFD700"/>
 </svg>

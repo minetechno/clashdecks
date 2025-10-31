@@ -1,11 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect x="16" y="24" width="32" height="28" fill="#FFD700" stroke="#E0A000" stroke-width="2" rx="2"/>
-  <rect x="20" y="28" width="24" height="20" fill="#FFA000"/>
-  <circle cx="32" cy="38" r="8" fill="#9C27B0"/>
-  <polygon points="32,32 28,38 32,36 36,38" fill="#E1BEE7"/>
-  <rect x="24" y="16" width="16" height="10" fill="#E0A000" stroke="#BF360C" stroke-width="1.5"/>
-  <rect x="28" y="14" width="8" height="4" fill="#D32F2F"/>
-  <rect x="14" y="50" width="36" height="4" fill="#BF360C"/>
-  <circle cx="24" cy="38" r="2" fill="#FFEB3B"/>
-  <circle cx="40" cy="38" r="2" fill="#FFEB3B"/>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="legGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="25%" style="stop-color:#FFA500"/>
+      <stop offset="50%" style="stop-color:#FF8C00"/>
+      <stop offset="75%" style="stop-color:#FFA500"/>
+      <stop offset="100%" style="stop-color:#FFD700"/>
+    </linearGradient>
+    <radialGradient id="rainbow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FF00FF;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#00FFFF;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#FFFF00;stop-opacity:0.2"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2"/><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="shadowLeg"><feDropShadow dx="2" dy="5" stdDeviation="4" flood-opacity="0.6"/></filter>
+  </defs>
+  <ellipse cx="32" cy="58" rx="26" ry="4" fill="#000" opacity="0.4"/>
+  <rect x="14" y="28" width="36" height="28" rx="3" fill="url(#legGrad)" filter="url(#shadowLeg)"/>
+  <rect x="16" y="30" width="32" height="24" fill="#8B4513"/>
+  <ellipse cx="32" cy="42" rx="18" ry="12" fill="url(#rainbow)" filter="url(#glow)"/>
+  <path d="M 14 28 Q 32 18 50 28" fill="url(#legGrad)" filter="url(#shadowLeg)"/>
+  <ellipse cx="32" cy="28" rx="18" ry="10" fill="#FFD700"/>
+  <rect x="30" y="36" width="4" height="12" fill="#4B0082" filter="url(#shadowLeg)"/>
+  <circle cx="32" cy="42" r="8" fill="#FF00FF"/>
+  <circle cx="32" cy="42" r="6" fill="#FFD700"/>
+  <circle cx="32" cy="42" r="4" fill="#FFF" opacity="0.8"/>
+  <path d="M 32 20 L 28 24 L 32 28 L 36 24 Z" fill="#FFD700" filter="url(#shadowLeg)"/>
+  <circle cx="20" cy="38" r="3" fill="#FF00FF" filter="url(#glow)"/>
+  <circle cx="44" cy="38" r="3" fill="#00FFFF" filter="url(#glow)"/>
+  <circle cx="20" cy="48" r="3" fill="#FFFF00" filter="url(#glow)"/>
+  <circle cx="44" cy="48" r="3" fill="#FF69B4" filter="url(#glow)"/>
 </svg>
