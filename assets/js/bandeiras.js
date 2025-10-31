@@ -107,16 +107,6 @@ function criarCardBandeira(bandeira) {
       </div>
       <p class="bau-card__description">${bandeira.descricao}</p>
     </div>
-    <div class="bau-card__footer">
-      <button
-        type="button"
-        class="btn btn--primary"
-        onclick='abrirModalBandeira(${JSON.stringify(bandeira).replace(/'/g, "&apos;")})'
-        aria-label="Ver detalhes de ${bandeira.nome}"
-      >
-        Ver Detalhes
-      </button>
-    </div>
   `;
 
   return article;
@@ -176,72 +166,10 @@ function inicializarEventos() {
       renderizarBandeiras();
     });
   }
-
-  // Modal - Fechar ao clicar fora
-  const modalOverlay = document.getElementById('modal-overlay');
-  if (modalOverlay) {
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) {
-        fecharModal();
-      }
-    });
-  }
-
-  // Modal - Fechar com ESC
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      fecharModal();
-    }
-  });
 }
 
 // ===================================
-// 6. MODAL
-// ===================================
-
-function abrirModalBandeira(bandeira) {
-  const modal = document.getElementById('modal-overlay');
-
-  // Preencher informações
-  document.getElementById('modal-title').textContent = bandeira.nome;
-  document.getElementById('modal-icon').src = `../assets/img/${bandeira.icone}`;
-  document.getElementById('modal-icon').alt = bandeira.nome;
-  document.getElementById('modal-categoria').textContent = bandeira.categoria;
-  document.getElementById('modal-categoria').className = `modal__badge bandeira-categoria bandeira-categoria--${bandeira.categoria.toLowerCase().replace(/\s+/g, '-')}`;
-  document.getElementById('modal-descricao').textContent = bandeira.descricao;
-  document.getElementById('modal-requisito').textContent = bandeira.requisito || 'Informação não disponível';
-  document.getElementById('modal-raridade').textContent = bandeira.raridade;
-  document.getElementById('modal-raridade').className = `raridade raridade--${bandeira.raridade.toLowerCase()}`;
-
-  // História (se existir)
-  const historiaSection = document.getElementById('modal-historia');
-  const historiaText = document.getElementById('modal-historia-text');
-  if (bandeira.historia) {
-    historiaText.textContent = bandeira.historia;
-    historiaSection.style.display = 'block';
-  } else {
-    historiaSection.style.display = 'none';
-  }
-
-  // Mostrar modal
-  modal.style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-
-  // Focar no botão de fechar
-  const closeButton = modal.querySelector('.modal__close');
-  if (closeButton) {
-    closeButton.focus();
-  }
-}
-
-function fecharModal() {
-  const modal = document.getElementById('modal-overlay');
-  modal.style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
-
-// ===================================
-// 7. UTILITÁRIOS
+// 6. UTILITÁRIOS
 // ===================================
 
 function mostrarLoading(show) {
@@ -261,7 +189,3 @@ function mostrarErro() {
     `;
   }
 }
-
-// Exportar funções globais para uso inline
-window.abrirModalBandeira = abrirModalBandeira;
-window.fecharModal = fecharModal;
