@@ -1035,3 +1035,37 @@ button:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===================================
+   BANDEIRAS DE GUERRA
+   =================================== */
+
+.bandeira-categoria {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border-radius: 12px;
+  font-size: var(--fonte-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bandeira-categoria--vitorias {
+  background-color: #FFD700;
+  color: #1A0A00;
+}
+
+.bandeira-categoria--vitórias {
+  background-color: #FFD700;
+  color: #1A0A00;
+}
+
+.bandeira-categoria--guerras {
+  background-color: #D32F2F;
+  color: #ffffff;
+}
+
+.bandeira-categoria--especiais {
+  background-color: #9C27B0;
+  color: #ffffff;
+}

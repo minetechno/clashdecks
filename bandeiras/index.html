@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bandeiras de Guerra do Clash Royale - Conheça todas as bandeiras e suas conquistas">
+  <meta name="theme-color" content="#2d5a7b">
+  <title>Bandeiras de Guerra - ClashDecks</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo" aria-label="ClashDecks - Página inicial">
+        <img src="../assets/img/logo.svg" alt="ClashDecks" class="header__logo-img">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="header__nav">
+          <li>
+            <a href="../index.html" class="header__nav-link">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="../personagens/index.html" class="header__nav-link">
+              Personagens
+            </a>
+          </li>
+          <li>
+            <a href="../baus/index.html" class="header__nav-link">
+              Baús
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">
+              Bandeiras
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Bandeiras de Guerra</h1>
+        <p class="hero__subtitle">Explore todas as bandeiras de conquista do Clash Royale</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <!-- Filtros -->
+      <section class="filters" aria-labelledby="filtros-titulo">
+        <h2 id="filtros-titulo" class="filters__title">
+          <img src="../assets/img/ui-filter.svg" alt="" aria-hidden="true" width="24" height="24">
+          Filtros
+        </h2>
+        <div class="filters__grid">
+          <!-- Filtro de Categoria -->
+          <div class="filter-group">
+            <label for="filter-categoria" class="filter-group__label">Categoria</label>
+            <div class="filter-group__buttons" role="group" aria-label="Filtrar por categoria">
+              <button type="button" class="filter-btn filter-btn--active" data-filter="categoria" data-value="Todas" aria-pressed="true">
+                Todas
+              </button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Vitórias" aria-pressed="false">
+                Vitórias
+              </button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Guerras" aria-pressed="false">
+                Guerras
+              </button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Especiais" aria-pressed="false">
+                Especiais
+              </button>
+            </div>
+          </div>
+
+          <!-- Busca -->
+          <div class="filter-group">
+            <label for="filter-busca" class="filter-group__label">Buscar</label>
+            <input
+              type="search"
+              id="filter-busca"
+              class="filter-group__search"
+              placeholder="Nome da bandeira..."
+              aria-label="Buscar bandeira por nome"
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Grid de Bandeiras -->
+      <section aria-labelledby="bandeiras-titulo">
+        <div class="section-header">
+          <h2 id="bandeiras-titulo" class="section-header__title">
+            <img src="../assets/img/ui-cards.svg" alt="" aria-hidden="true" width="24" height="24">
+            <span id="bandeiras-count">Carregando...</span>
+          </h2>
+        </div>
+
+        <div id="bandeiras-grid" class="baus-grid" role="list">
+          <!-- Bandeiras serão inseridas aqui via JavaScript -->
+        </div>
+
+        <!-- Mensagem de Vazio -->
+        <div id="empty-message" class="empty-message" style="display: none;">
+          <p>Nenhuma bandeira encontrada com os filtros selecionados.</p>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading">
+          <p>Carregando bandeiras...</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal de Detalhes da Bandeira -->
+  <div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="modal">
+      <button type="button" class="modal__close" aria-label="Fechar modal" onclick="fecharModal()">
+        &times;
+      </button>
+
+      <div class="modal__content">
+        <div class="modal__header">
+          <img id="modal-icon" src="" alt="" class="modal__icon">
+          <div>
+            <h2 id="modal-title" class="modal__title">Nome da Bandeira</h2>
+            <span id="modal-categoria" class="modal__badge"></span>
+          </div>
+        </div>
+
+        <div class="modal__body">
+          <p id="modal-descricao" class="modal__description"></p>
+
+          <div class="modal__section">
+            <h3 class="modal__section-title">Requisito</h3>
+            <p id="modal-requisito" class="modal__text"></p>
+          </div>
+
+          <div class="modal__section">
+            <h3 class="modal__section-title">Raridade</h3>
+            <span id="modal-raridade" class="raridade"></span>
+          </div>
+
+          <div id="modal-historia" class="modal__section" style="display: none;">
+            <h3 class="modal__section-title">História</h3>
+            <p id="modal-historia-text" class="modal__text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 ClashDecks - Catálogo de Decks de Clash Royale</p>
+      <p>Projeto educacional. Todos os ícones e códigos são criações originais.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/bandeiras.js"></script>
+</body>
+</html>
