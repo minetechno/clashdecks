@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="arena22-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0033;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#330066;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0033;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="arena22-crystal" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#cc00ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9900cc;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="arena22-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ff00ff;stop-opacity:0.8" />
+      <stop offset="70%" style="stop-color:#cc00ff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#330066;stop-opacity:0" />
+    </radialGradient>
+
+    <linearGradient id="arena22-gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Filtros -->
+    <filter id="arena22-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="arena22-glow-filter">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <circle cx="100" cy="100" r="95" fill="url(#arena22-bg)" filter="url(#arena22-shadow)"/>
+
+  <!-- Brilho ambiente -->
+  <circle cx="100" cy="100" r="85" fill="url(#arena22-glow)" opacity="0.6"/>
+
+  <!-- Base do portal -->
+  <ellipse cx="100" cy="140" rx="60" ry="20" fill="#1a0033" opacity="0.5"/>
+
+  <!-- Portal mágico -->
+  <ellipse cx="100" cy="100" rx="55" ry="70" fill="url(#arena22-crystal)" opacity="0.3" filter="url(#arena22-glow-filter)"/>
+  <ellipse cx="100" cy="100" rx="45" ry="60" fill="url(#arena22-crystal)" opacity="0.5"/>
+  <ellipse cx="100" cy="100" rx="35" ry="50" fill="#ff00ff" opacity="0.7" filter="url(#arena22-glow-filter)"/>
+
+  <!-- Cristais laterais -->
+  <polygon points="40,120 35,90 45,90" fill="url(#arena22-crystal)" filter="url(#arena22-shadow)"/>
+  <polygon points="160,120 155,90 165,90" fill="url(#arena22-crystal)" filter="url(#arena22-shadow)"/>
+
+  <!-- Estrelas mágicas -->
+  <path d="M100,40 L103,50 L113,50 L105,57 L108,67 L100,60 L92,67 L95,57 L87,50 L97,50 Z" fill="url(#arena22-gold)" filter="url(#arena22-glow-filter)"/>
+
+  <!-- Runas -->
+  <circle cx="70" cy="80" r="5" fill="#ff00ff" opacity="0.8" filter="url(#arena22-glow-filter)"/>
+  <circle cx="130" cy="80" r="5" fill="#ff00ff" opacity="0.8" filter="url(#arena22-glow-filter)"/>
+  <circle cx="70" cy="120" r="5" fill="#cc00ff" opacity="0.8" filter="url(#arena22-glow-filter)"/>
+  <circle cx="130" cy="120" r="5" fill="#cc00ff" opacity="0.8" filter="url(#arena22-glow-filter)"/>
+
+  <!-- Borda dourada -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#arena22-gold)" stroke-width="3" opacity="0.8"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="url(#arena22-gold)" stroke-width="1" opacity="0.5"/>
+
+  <!-- Detalhes -->
+  <path d="M100,35 L105,45 L100,55 L95,45 Z" fill="url(#arena22-gold)" opacity="0.9"/>
+  <path d="M100,145 L105,155 L100,165 L95,155 Z" fill="url(#arena22-gold)" opacity="0.9"/>
+</svg>

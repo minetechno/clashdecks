@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melhores Personagens - ClashDecks</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="../assets/img/logo.svg" alt="ClashDecks Logo">
+                <h1>ClashDecks</h1>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li>
+                        <a href="../index.html" class="header__nav-link">Decks</a>
+                    </li>
+                    <li>
+                        <a href="../personagens/index.html" class="header__nav-link">Personagens</a>
+                    </li>
+                    <li>
+                        <a href="../baus/index.html" class="header__nav-link">Baús</a>
+                    </li>
+                    <li>
+                        <a href="../bandeiras/index.html" class="header__nav-link">Bandeiras</a>
+                    </li>
+                    <li>
+                        <a href="../emotes/index.html" class="header__nav-link">Emotes</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="header__nav-link header__nav-link--active">Melhores</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <h1 class="hero__title">Melhores Personagens</h1>
+            <p class="hero__subtitle">Os personagens mais poderosos do Clash Royale em cada categoria</p>
+        </section>
+
+        <section class="content">
+            <!-- Melhores Ofensivos -->
+            <div class="melhores-section">
+                <h2 class="melhores-section__title">
+                    <span class="melhores-section__icon">⚔️</span>
+                    Melhores Ofensivos
+                </h2>
+                <p class="melhores-section__description">Personagens com alto poder de ataque e capacidade de destruir torres</p>
+                <div id="melhores-ofensivos" class="personagens-grid">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+
+            <!-- Melhores Defensivos -->
+            <div class="melhores-section">
+                <h2 class="melhores-section__title">
+                    <span class="melhores-section__icon">🛡️</span>
+                    Melhores Defensivos
+                </h2>
+                <p class="melhores-section__description">Personagens ideais para proteção e controle de área</p>
+                <div id="melhores-defensivos" class="personagens-grid">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+
+            <!-- Melhores Mistura (Versáteis) -->
+            <div class="melhores-section">
+                <h2 class="melhores-section__title">
+                    <span class="melhores-section__icon">⚡</span>
+                    Melhores Versáteis
+                </h2>
+                <p class="melhores-section__description">Personagens balanceados que funcionam em ataque e defesa</p>
+                <div id="melhores-versateis" class="personagens-grid">
+                    <div class="loading">Carregando...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 ClashDecks - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="../assets/js/melhores.js"></script>
+</body>
+</html>

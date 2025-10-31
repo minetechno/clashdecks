@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executar Expansão - ClashDecks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1e3c72;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .info-box {
+            background: #f0f7ff;
+            border-left: 4px solid #2a5298;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            padding: 8px 0;
+            color: #333;
+        }
+
+        .info-box li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
+        }
+
+        #output {
+            background: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            max-height: 500px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            white-space: pre-wrap;
+            display: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #2a5298;
+            font-size: 1.2em;
+            display: none;
+        }
+
+        .loading:after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏆 ClashDecks - Expansão do Banco</h1>
+        <p class="subtitle">Sistema de Adição Massiva de Conteúdo</p>
+
+        <div class="info-box">
+            <h3>📋 O que será adicionado:</h3>
+            <ul>
+                <li>3 Novas Arenas (22, 23, 24) com ícones SVG personalizados</li>
+                <li>45 Novos Personagens (Tropas, Feitiços, Construções, Campeões)</li>
+                <li>14 Novos Baús (Platina, Diamante, Titânico, etc)</li>
+                <li>19 Novas Bandeiras (Vitórias, Guerras, Especiais)</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>📊 Totais Esperados:</h3>
+            <ul>
+                <li>Arenas: 21 → 24</li>
+                <li>Personagens: 40 → 85</li>
+                <li>Baús: 16 → 30</li>
+                <li>Bandeiras: 16 → 35</li>
+            </ul>
+        </div>
+
+        <div class="button-container">
+            <button class="btn btn-primary" onclick="executarScripts()">
+                🚀 Executar Expansão
+            </button>
+            <a href="index.html" class="btn btn-secondary">
+                🏠 Voltar ao Site
+            </a>
+        </div>
+
+        <div class="loading" id="loading">
+            Executando scripts
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        async function executarScripts() {
+            const outputDiv = document.getElementById('output');
+            const loadingDiv = document.getElementById('loading');
+            const buttons = document.querySelectorAll('.btn');
+
+            // Desabilitar botões
+            buttons.forEach(btn => btn.style.pointerEvents = 'none');
+            loadingDiv.style.display = 'block';
+            outputDiv.style.display = 'block';
+            outputDiv.textContent = 'Iniciando execução dos scripts...\n\n';
+
+            try {
+                const response = await fetch('executar_todos_scripts.php');
+                const text = await response.text();
+
+                outputDiv.textContent = text;
+                loadingDiv.style.display = 'none';
+                buttons.forEach(btn => btn.style.pointerEvents = 'auto');
+
+                // Scroll para o final
+                outputDiv.scrollTop = outputDiv.scrollHeight;
+            } catch (error) {
+                outputDiv.textContent = '❌ Erro ao executar scripts:\n' + error.message;
+                loadingDiv.style.display = 'none';
+                buttons.forEach(btn => btn.style.pointerEvents = 'auto');
+            }
+        }
+    </script>
+</body>
+</html>

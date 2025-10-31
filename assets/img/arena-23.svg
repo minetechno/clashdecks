@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="arena23-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#000033;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003366;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000033;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="arena23-ice" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0099ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="arena23-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00ffff;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#0099ff;stop-opacity:0.5" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:0" />
+    </radialGradient>
+
+    <linearGradient id="arena23-silver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#C0C0C0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A0A0A0;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Filtros -->
+    <filter id="arena23-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="arena23-glow-filter">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <circle cx="100" cy="100" r="95" fill="url(#arena23-bg)" filter="url(#arena23-shadow)"/>
+
+  <!-- Brilho ambiente -->
+  <circle cx="100" cy="100" r="85" fill="url(#arena23-glow)" opacity="0.5"/>
+
+  <!-- Fortaleza -->
+  <rect x="60" y="80" width="80" height="70" fill="url(#arena23-ice)" filter="url(#arena23-shadow)"/>
+  <rect x="65" y="85" width="70" height="60" fill="#003366" opacity="0.6"/>
+
+  <!-- Torres laterais -->
+  <rect x="45" y="90" width="15" height="50" fill="url(#arena23-ice)" filter="url(#arena23-shadow)"/>
+  <rect x="140" y="90" width="15" height="50" fill="url(#arena23-ice)" filter="url(#arena23-shadow)"/>
+
+  <!-- Topo das torres -->
+  <polygon points="45,90 52.5,75 60,90" fill="url(#arena23-silver)" filter="url(#arena23-shadow)"/>
+  <polygon points="140,90 147.5,75 155,90" fill="url(#arena23-silver)" filter="url(#arena23-shadow)"/>
+
+  <!-- Torre central -->
+  <rect x="85" y="50" width="30" height="30" fill="url(#arena23-ice)" filter="url(#arena23-shadow)"/>
+  <polygon points="85,50 100,35 115,50" fill="url(#arena23-silver)" filter="url(#arena23-shadow)"/>
+
+  <!-- Cristais de gelo -->
+  <polygon points="100,60 95,70 105,70" fill="#00ffff" opacity="0.9" filter="url(#arena23-glow-filter)"/>
+  <circle cx="75" cy="105" r="8" fill="#00ffff" opacity="0.8" filter="url(#arena23-glow-filter)"/>
+  <circle cx="125" cy="105" r="8" fill="#00ffff" opacity="0.8" filter="url(#arena23-glow-filter)"/>
+
+  <!-- Portão -->
+  <rect x="85" y="120" width="30" height="30" fill="#001a33" opacity="0.8"/>
+  <circle cx="100" cy="135" r="3" fill="url(#arena23-ice)" filter="url(#arena23-glow-filter)"/>
+
+  <!-- Neve e gelo no topo -->
+  <ellipse cx="100" cy="48" rx="20" ry="5" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="52" cy="73" rx="10" ry="3" fill="#ffffff" opacity="0.6"/>
+  <ellipse cx="148" cy="73" rx="10" ry="3" fill="#ffffff" opacity="0.6"/>
+
+  <!-- Borda prateada -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="url(#arena23-silver)" stroke-width="3" opacity="0.8"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#00ffff" stroke-width="1" opacity="0.6"/>
+
+  <!-- Flocos de neve decorativos -->
+  <path d="M50,50 L52,52 M50,52 L52,50 M51,48 L51,54 M48,51 L54,51" stroke="#00ffff" stroke-width="1.5" opacity="0.7"/>
+  <path d="M150,60 L152,62 M150,62 L152,60 M151,58 L151,64 M148,61 L154,61" stroke="#00ffff" stroke-width="1.5" opacity="0.7"/>
+  <path d="M60,150 L62,152 M60,152 L62,150 M61,148 L61,154 M58,151 L64,151" stroke="#00ffff" stroke-width="1.5" opacity="0.7"/>
+</svg>

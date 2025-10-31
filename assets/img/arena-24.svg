@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="arena24-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="arena24-throne" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#DAA520;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+
+    <radialGradient id="arena24-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FFA500;stop-opacity:0.6" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0" />
+    </radialGradient>
+
+    <linearGradient id="arena24-jewel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF0000;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#CC0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#990000;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Filtros -->
+    <filter id="arena24-shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+      <feOffset dx="0" dy="5" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="arena24-glow-filter">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fundo radiante -->
+  <circle cx="100" cy="100" r="95" fill="url(#arena24-bg)" filter="url(#arena24-shadow)"/>
+
+  <!-- Brilho divino -->
+  <circle cx="100" cy="100" r="85" fill="url(#arena24-glow)" opacity="0.7" filter="url(#arena24-glow-filter)"/>
+
+  <!-- Base do trono -->
+  <ellipse cx="100" cy="145" rx="65" ry="15" fill="#B8860B" opacity="0.7" filter="url(#arena24-shadow)"/>
+  <rect x="50" y="130" width="100" height="15" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+
+  <!-- Trono -->
+  <rect x="70" y="90" width="60" height="50" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+
+  <!-- Encosto do trono -->
+  <rect x="75" y="60" width="50" height="35" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+  <polygon points="75,60 100,40 125,60" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+
+  <!-- Braços do trono -->
+  <rect x="60" y="100" width="15" height="30" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+  <rect x="125" y="100" width="15" height="30" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+
+  <!-- Detalhes dourados -->
+  <circle cx="67" cy="105" r="5" fill="#FFD700" filter="url(#arena24-glow-filter)"/>
+  <circle cx="133" cy="105" r="5" fill="#FFD700" filter="url(#arena24-glow-filter)"/>
+
+  <!-- Joia central -->
+  <circle cx="100" cy="80" r="12" fill="url(#arena24-jewel)" filter="url(#arena24-glow-filter)"/>
+  <circle cx="100" cy="80" r="8" fill="#FF0000" opacity="0.8" filter="url(#arena24-glow-filter)"/>
+  <circle cx="98" cy="78" r="3" fill="#FF6666" opacity="0.9"/>
+
+  <!-- Coroa no topo -->
+  <path d="M85,45 L85,50 L115,50 L115,45 L110,40 L105,48 L100,35 L95,48 L90,40 Z" fill="url(#arena24-throne)" filter="url(#arena24-shadow)"/>
+
+  <!-- Pontos brilhantes na coroa -->
+  <circle cx="90" cy="40" r="3" fill="#FFD700" filter="url(#arena24-glow-filter)"/>
+  <circle cx="100" cy="35" r="4" fill="#FFD700" filter="url(#arena24-glow-filter)"/>
+  <circle cx="110" cy="40" r="3" fill="#FFD700" filter="url(#arena24-glow-filter)"/>
+
+  <!-- Raios de luz -->
+  <line x1="100" y1="30" x2="100" y2="15" stroke="#FFD700" stroke-width="3" opacity="0.8" filter="url(#arena24-glow-filter)"/>
+  <line x1="85" y1="35" x2="75" y2="25" stroke="#FFD700" stroke-width="2" opacity="0.6" filter="url(#arena24-glow-filter)"/>
+  <line x1="115" y1="35" x2="125" y2="25" stroke="#FFD700" stroke-width="2" opacity="0.6" filter="url(#arena24-glow-filter)"/>
+
+  <!-- Estrelas decorativas -->
+  <path d="M40,70 L42,75 L47,75 L43,78 L45,83 L40,80 L35,83 L37,78 L33,75 L38,75 Z" fill="#FFD700" opacity="0.9" filter="url(#arena24-glow-filter)"/>
+  <path d="M160,70 L162,75 L167,75 L163,78 L165,83 L160,80 L155,83 L157,78 L153,75 L158,75 Z" fill="#FFD700" opacity="0.9" filter="url(#arena24-glow-filter)"/>
+
+  <!-- Borda dourada dupla -->
+  <circle cx="100" cy="100" r="93" fill="none" stroke="#FFD700" stroke-width="4" opacity="0.9"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#FFA500" stroke-width="2" opacity="0.7"/>
+
+  <!-- Detalhes ornamentais -->
+  <path d="M100,150 L95,160 L100,155 L105,160 Z" fill="#FFD700" opacity="0.8"/>
+</svg>
