@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Emotes do Clash Royale - Todos os emotes do jogo">
+  <meta name="theme-color" content="#2d5a7b">
+  <title>Emotes - ClashDecks</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo" aria-label="ClashDecks - Página inicial">
+        <img src="../assets/img/logo.svg" alt="ClashDecks" class="header__logo-img">
+      </a>
+      <nav aria-label="Navegação principal">
+        <ul class="header__nav">
+          <li><a href="../index.html" class="header__nav-link">Home</a></li>
+          <li><a href="../personagens/index.html" class="header__nav-link">Personagens</a></li>
+          <li><a href="../baus/index.html" class="header__nav-link">Baús</a></li>
+          <li><a href="../bandeiras/index.html" class="header__nav-link">Bandeiras</a></li>
+          <li><a href="index.html" class="header__nav-link header__nav-link--active" aria-current="page">Emotes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Emotes do Clash Royale</h1>
+        <p class="hero__subtitle">Explore todos os emotes e suas animações</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="filters" aria-labelledby="filtros-titulo">
+        <h2 id="filtros-titulo" class="filters__title">
+          <img src="../assets/img/ui-filter.svg" alt="" aria-hidden="true" width="24" height="24">
+          Filtros
+        </h2>
+        <div class="filters__grid">
+          <div class="filter-group">
+            <label for="filter-categoria" class="filter-group__label">Categoria</label>
+            <div class="filter-group__buttons" role="group" aria-label="Filtrar por categoria">
+              <button type="button" class="filter-btn filter-btn--active" data-filter="categoria" data-value="Todas" aria-pressed="true">Todas</button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Dança" aria-pressed="false">Dança</button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Feliz" aria-pressed="false">Feliz</button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Provocação" aria-pressed="false">Provocação</button>
+              <button type="button" class="filter-btn" data-filter="categoria" data-value="Respeito" aria-pressed="false">Respeito</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label for="filter-busca" class="filter-group__label">Buscar</label>
+            <input type="search" id="filter-busca" class="filter-group__search" placeholder="Nome do emote..." aria-label="Buscar emote por nome">
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="emotes-titulo">
+        <div class="section-header">
+          <h2 id="emotes-titulo" class="section-header__title">
+            <img src="../assets/img/ui-cards.svg" alt="" aria-hidden="true" width="24" height="24">
+            <span id="emotes-count">Carregando...</span>
+          </h2>
+        </div>
+
+        <div id="emotes-grid" class="baus-grid" role="list"></div>
+
+        <div id="empty-message" class="empty-message" style="display: none;">
+          <p>Nenhum emote encontrado com os filtros selecionados.</p>
+        </div>
+
+        <div id="loading" class="loading">
+          <p>Carregando emotes...</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 ClashDecks - Catálogo de Decks de Clash Royale</p>
+      <p>Projeto educacional. Todos os ícones e códigos são criações originais.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/emotes.js"></script>
+</body>
+</html>
