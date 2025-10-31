@@ -27,7 +27,7 @@ define('ADMIN_DB_CHARSET', 'utf8mb4');
  */
 function getAdminDBConnection() {
     try {
-        $dsn = "mysql:host=" . ADMIN_DB_HOST . ";dbname=" . ADMIN_DB_NAME . ";charset=" . ADMIN_DB_CHARSET;
+        $dsn = "mysql:host=" . ADMIN_DB_HOST . ";port=3307;dbname=" . ADMIN_DB_NAME . ";charset=" . ADMIN_DB_CHARSET;
 
         $options = [
             PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
