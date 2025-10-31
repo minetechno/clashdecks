@@ -1,15 +1,34 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="32" cy="36" rx="14" ry="12" fill="#4682B4"/>
-  <circle cx="32" cy="24" r="9" fill="#4682B4"/>
-  <circle cx="29" cy="22" r="2" fill="#FFFF00"/>
-  <circle cx="35" cy="22" r="2" fill="#FFFF00"/>
-  <path d="M 29 28 Q 32 30 35 28" stroke="#000" stroke-width="2" fill="none"/>
-  <path d="M 14 32 Q 10 28 8 32 Q 10 36 14 32" fill="#87CEEB"/>
-  <path d="M 50 32 Q 54 28 56 32 Q 54 36 50 32" fill="#87CEEB"/>
+  <defs>
+    <linearGradient id="electricBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB"/>
+      <stop offset="50%" style="stop-color:#4682B4"/>
+      <stop offset="100%" style="stop-color:#1E90FF"/>
+    </linearGradient>
+    <radialGradient id="zapGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFFF00;stop-opacity:0.9"/>
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:0.6"/>
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:0.2"/>
+    </radialGradient>
+    <filter id="dragonShadow"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.5"/></filter>
+    <filter id="electric"><feGaussianBlur stdDeviation="1.5"/></filter>
+  </defs>
+  <ellipse cx="32" cy="56" rx="20" ry="4" fill="#000" opacity="0.3"/>
+  <ellipse cx="32" cy="36" rx="14" ry="12" fill="url(#electricBlue)" filter="url(#dragonShadow)"/>
+  <circle cx="32" cy="24" r="9" fill="url(#electricBlue)" filter="url(#dragonShadow)"/>
+  <circle cx="29" cy="22" r="3" fill="#FFFF00"/>
+  <circle cx="35" cy="22" r="3" fill="#FFFF00"/>
+  <circle cx="29" cy="22" r="2" fill="#FFD700"/>
+  <circle cx="35" cy="22" r="2" fill="#FFD700"/>
+  <path d="M 29 28 Q 32 30 35 28" stroke="#1E3A8A" stroke-width="2" fill="none"/>
+  <path d="M 14 32 Q 10 28 8 32 Q 10 36 14 32 Z" fill="#87CEEB" filter="url(#dragonShadow)"/>
+  <path d="M 50 32 Q 54 28 56 32 Q 54 36 50 32 Z" fill="#87CEEB" filter="url(#dragonShadow)"/>
   <path d="M 32 48 L 28 54 L 32 52 L 36 54 Z" fill="#1E90FF"/>
-  <path d="M 40 24 L 46 18 L 44 26 L 48 20 L 46 28" stroke="#FFFF00" stroke-width="2" fill="none"/>
-  <circle cx="42" cy="22" r="3" fill="#FFFF00" opacity="0.5"/>
-  <path d="M 18 28 L 12 24 L 14 30 L 10 26 L 12 32" stroke="#FFFF00" stroke-width="2" fill="none"/>
-  <circle cx="16" cy="28" r="3" fill="#FFFF00" opacity="0.5"/>
   <path d="M 24 18 L 26 12 L 28 18 M 36 18 L 38 12 L 40 18" fill="#1E3A8A"/>
+  <path d="M 40 24 L 46 18 L 44 26 L 48 20 L 46 28 Z" stroke="url(#zapGlow)" stroke-width="2.5" fill="none" filter="url(#electric)"/>
+  <circle cx="46" cy="20" r="4" fill="url(#zapGlow)" filter="url(#electric)"/>
+  <circle cx="42" cy="22" r="3" fill="#FFFF00" opacity="0.7"/>
+  <path d="M 18 28 L 12 24 L 14 30 L 10 26 L 12 32 Z" stroke="url(#zapGlow)" stroke-width="2.5" fill="none" filter="url(#electric)"/>
+  <circle cx="14" cy="28" r="4" fill="url(#zapGlow)" filter="url(#electric)"/>
+  <circle cx="16" cy="28" r="3" fill="#FFFF00" opacity="0.7"/>
 </svg>

@@ -1,16 +1,38 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect x="22" y="28" width="20" height="24" rx="4" fill="#4B4B4B"/>
+  <defs>
+    <linearGradient id="pekkaArmor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#696969"/>
+      <stop offset="50%" style="stop-color:#4B4B4B"/>
+      <stop offset="100%" style="stop-color:#2F2F2F"/>
+    </linearGradient>
+    <linearGradient id="butterflyWing" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF69B4"/>
+      <stop offset="50%" style="stop-color:#FF1493"/>
+      <stop offset="100%" style="stop-color:#FFB6C1"/>
+    </linearGradient>
+    <radialGradient id="eyeGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FF1493;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#C71585;stop-opacity:0.5"/>
+    </radialGradient>
+    <filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.5"/></filter>
+    <filter id="flutter"><feGaussianBlur stdDeviation="0.8"/></filter>
+  </defs>
+  <ellipse cx="32" cy="58" rx="22" ry="4" fill="#000" opacity="0.4"/>
+  <rect x="22" y="28" width="20" height="24" rx="4" fill="url(#pekkaArmor)" filter="url(#shadow)"/>
   <rect x="24" y="30" width="16" height="20" fill="#696969"/>
-  <ellipse cx="32" cy="22" rx="8" ry="10" fill="#4B4B4B"/>
-  <circle cx="29" cy="20" r="3" fill="#FF1493"/>
-  <circle cx="35" cy="20" r="3" fill="#FF1493"/>
+  <ellipse cx="32" cy="22" rx="8" ry="10" fill="url(#pekkaArmor)" filter="url(#shadow)"/>
+  <circle cx="29" cy="20" r="3" fill="url(#eyeGlow)" filter="url(#flutter)"/>
+  <circle cx="35" cy="20" r="3" fill="url(#eyeGlow)" filter="url(#flutter)"/>
+  <circle cx="29" cy="20" r="2" fill="#FF1493"/>
+  <circle cx="35" cy="20" r="2" fill="#FF1493"/>
   <rect x="28" y="24" width="8" height="6" fill="#4B4B4B"/>
-  <rect x="18" y="36" width="6" height="12" fill="#696969"/>
-  <rect x="40" y="36" width="6" height="12" fill="#696969"/>
+  <rect x="18" y="36" width="6" height="12" fill="#696969" filter="url(#shadow)"/>
+  <rect x="40" y="36" width="6" height="12" fill="#696969" filter="url(#shadow)"/>
+  <path d="M 44 16 Q 42 14 40 16 Q 42 18 44 16 Z" fill="url(#butterflyWing)" filter="url(#flutter)"/>
+  <path d="M 48 16 Q 50 14 52 16 Q 50 18 48 16 Z" fill="url(#butterflyWing)" filter="url(#flutter)"/>
+  <path d="M 44 20 Q 42 22 40 20 Q 42 18 44 20 Z" fill="#FFB6C1" filter="url(#flutter)"/>
+  <path d="M 48 20 Q 50 22 52 20 Q 50 18 48 20 Z" fill="#FFB6C1" filter="url(#flutter)"/>
+  <circle cx="46" cy="18" r="4" fill="none" stroke="#FF1493" stroke-width="0.8" filter="url(#flutter)"/>
   <circle cx="46" cy="18" r="1" fill="#000"/>
-  <path d="M 44 16 Q 42 14 40 16 Q 42 18 44 16" fill="#FF69B4"/>
-  <path d="M 48 16 Q 50 14 52 16 Q 50 18 48 16" fill="#FF69B4"/>
-  <path d="M 44 20 Q 42 22 40 20 Q 42 18 44 20" fill="#FFB6C1"/>
-  <path d="M 48 20 Q 50 22 52 20 Q 50 18 48 20" fill="#FFB6C1"/>
-  <circle cx="46" cy="18" r="3" fill="none" stroke="#FF1493" stroke-width="0.5"/>
+  <path d="M 45 12 L 47 12 M 45 14 Q 46 15 47 14" stroke="#FF69B4" stroke-width="0.5"/>
 </svg>

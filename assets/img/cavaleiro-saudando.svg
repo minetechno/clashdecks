@@ -1,17 +1,37 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="32" cy="26" r="8" fill="#FFE4B5"/>
-  <ellipse cx="32" cy="22" rx="10" ry="6" fill="#696969"/>
-  <rect x="28" y="24" width="2" height="4" fill="#696969"/>
-  <rect x="34" y="24" width="2" height="4" fill="#696969"/>
+  <defs>
+    <linearGradient id="armorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#C0C0C0"/>
+      <stop offset="50%" style="stop-color:#A9A9A9"/>
+      <stop offset="100%" style="stop-color:#696969"/>
+    </linearGradient>
+    <linearGradient id="helmetGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#B0B0B0"/>
+      <stop offset="100%" style="stop-color:#808080"/>
+    </linearGradient>
+    <radialGradient id="shieldGlow" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFA500"/>
+    </radialGradient>
+    <filter id="shadow"><feDropShadow dx="2" dy="3" stdDeviation="2" flood-opacity="0.4"/></filter>
+    <filter id="shine"><feGaussianBlur stdDeviation="0.5"/></filter>
+  </defs>
+  <ellipse cx="32" cy="58" rx="20" ry="3" fill="#000" opacity="0.4"/>
+  <rect x="26" y="32" width="12" height="16" fill="url(#armorGrad)" filter="url(#shadow)"/>
+  <circle cx="32" cy="40" rx="6" ry="6" fill="url(#shieldGlow)" filter="url(#shadow)"/>
+  <circle cx="32" cy="40" r="4" fill="#FFD700" opacity="0.8"/>
+  <ellipse cx="32" cy="26" rx="8" ry="10" fill="url(#helmetGrad)" filter="url(#shadow)"/>
+  <rect x="28" cy="24" width="2" height="4" fill="#696969"/>
+  <rect x="34" cy="24" width="2" height="4" fill="#696969"/>
   <circle cx="30" cy="27" r="1.5" fill="#000"/>
   <circle cx="34" cy="27" r="1.5" fill="#000"/>
-  <rect x="26" y="32" width="12" height="16" fill="#A9A9A9"/>
-  <circle cx="32" cy="40" r="6" fill="#C0C0C0"/>
-  <rect x="24" y="46" width="5" height="6" fill="#696969"/>
-  <rect x="35" y="46" width="5" height="6" fill="#696969"/>
-  <path d="M 18 34 L 14 28 L 16 36" fill="#A9A9A9"/>
-  <ellipse cx="16" cy="30" rx="4" ry="6" fill="#FFD700"/>
-  <path d="M 32 18 L 34 14 L 36 18" fill="#DC143C"/>
+  <path d="M 32 18 L 34 14 L 36 18 Z" fill="#DC143C"/>
   <rect x="30" y="18" width="4" height="6" fill="#DC143C"/>
-  <circle cx="32" cy="40" r="3" fill="#FFD700"/>
+  <path d="M 18 34 L 14 28 L 16 36 Z" fill="url(#armorGrad)" filter="url(#shadow)"/>
+  <ellipse cx="16" cy="30" rx="4" ry="6" fill="url(#shieldGlow)" filter="url(#shadow)"/>
+  <circle cx="16" cy="30" r="3" fill="#FFD700" opacity="0.8"/>
+  <rect x="24" y="46" width="5" height="6" fill="#696969" filter="url(#shadow)"/>
+  <rect x="35" y="46" width="5" height="6" fill="#696969" filter="url(#shadow)"/>
+  <circle cx="14" cy="28" r="2" fill="#FFF" opacity="0.6" filter="url(#shine)"/>
+  <circle cx="33" cy="39" r="1.5" fill="#FFF" opacity="0.7" filter="url(#shine)"/>
 </svg>

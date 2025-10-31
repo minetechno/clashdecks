@@ -1,18 +1,35 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="32" cy="28" r="10" fill="#FFE4B5"/>
-  <circle cx="28" cy="26" r="2" fill="#000"/>
-  <circle cx="36" cy="26" r="2" fill="#000"/>
-  <ellipse cx="32" cy="32" rx="4" ry="6" fill="#000"/>
-  <ellipse cx="32" cy="32" rx="3" ry="5" fill="#8B0000"/>
-  <path d="M 26 20 Q 28 14 32 14 Q 36 14 38 20" fill="#FFD700"/>
-  <circle cx="28" cy="16" r="3" fill="#FFD700"/>
-  <circle cx="36" cy="16" r="3" fill="#FFD700"/>
-  <rect x="28" y="36" width="8" height="12" fill="#FF69B4"/>
-  <path d="M 38 30 L 44 28 L 46 32" fill="#FFE4B5"/>
-  <rect x="26" y="46" width="5" height="6" fill="#FFB6C1"/>
-  <rect x="33" y="46" width="5" height="6" fill="#FFB6C1"/>
-  <circle cx="24" cy="34" r="2" fill="#ADD8E6" opacity="0.5"/>
-  <circle cx="26" cy="36" r="2" fill="#ADD8E6" opacity="0.5"/>
-  <path d="M 20 22 L 22 18 L 24 20" fill="#FFD700"/>
-  <path d="M 40 20 L 42 18 L 44 22" fill="#FFD700"/>
+  <defs>
+    <linearGradient id="princessHair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFA500"/>
+    </linearGradient>
+    <linearGradient id="princessSkin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFE4E1"/>
+      <stop offset="100%" style="stop-color:#FFB6C1"/>
+    </linearGradient>
+    <radialGradient id="tiara" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FF69B4"/>
+    </radialGradient>
+    <filter id="shadow"><feDropShadow dx="1" dy="3" stdDeviation="2" flood-opacity="0.4"/></filter>
+    <filter id="yawn"><feGaussianBlur stdDeviation="0.8"/></filter>
+  </defs>
+  <ellipse cx="32" cy="58" rx="18" ry="3" fill="#000" opacity="0.3"/>
+  <rect x="22" y="38" width="20" height="18" rx="2" fill="#FF69B4" filter="url(#shadow)"/>
+  <ellipse cx="32" cy="30" rx="12" ry="14" fill="url(#princessSkin)" filter="url(#shadow)"/>
+  <path d="M 20 24 Q 20 16 32 14 Q 44 16 44 24" fill="url(#princessHair)" filter="url(#shadow)"/>
+  <path d="M 24 16 L 26 12 L 28 14 L 32 10 L 36 14 L 38 12 L 40 16" fill="url(#tiara)" filter="url(#shadow)"/>
+  <circle cx="32" cy="12" r="3" fill="#FF1493"/>
+  <circle cx="27" cy="28" r="2" fill="#000"/>
+  <circle cx="37" cy="28" r="2" fill="#000"/>
+  <ellipse cx="32" cy="36" rx="5" ry="7" fill="#8B0000" filter="url(#yawn)"/>
+  <ellipse cx="32" cy="36" rx="4" ry="6" fill="#000" opacity="0.7"/>
+  <path d="M 38 32 L 44 30 L 46 34" fill="url(#princessSkin)" filter="url(#shadow)"/>
+  <ellipse cx="24" cy="32" rx="2" ry="3" fill="#FF6B6B" opacity="0.5"/>
+  <ellipse cx="40" cy="32" rx="2" ry="3" fill="#FF6B6B" opacity="0.5"/>
+  <path d="M 20 22 Q 18 18 16 20" stroke="url(#princessHair)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 44 22 Q 46 18 48 20" stroke="url(#princessHair)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="20" cy="34" r="2" fill="#ADD8E6" opacity="0.4" filter="url(#yawn)"/>
+  <circle cx="22" cy="36" r="1.5" fill="#ADD8E6" opacity="0.4" filter="url(#yawn)"/>
 </svg>

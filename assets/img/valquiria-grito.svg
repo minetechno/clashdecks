@@ -1,17 +1,40 @@
 <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="32" cy="24" r="8" fill="#FFE4B5"/>
-  <circle cx="30" cy="22" r="1.5" fill="#000"/>
-  <circle cx="34" cy="22" r="1.5" fill="#000"/>
-  <ellipse cx="32" cy="27" rx="3" ry="4" fill="#8B0000"/>
-  <path d="M 24 20 Q 26 14 32 14 Q 38 14 40 20" fill="#FFD700"/>
-  <path d="M 24 18 L 26 12 L 28 18 M 36 18 L 38 12 L 40 18" fill="#FFD700"/>
-  <rect x="26" y="30" width="12" height="14" fill="#DC143C"/>
-  <rect x="20" y="34" width="8" height="4" fill="#B22222"/>
-  <rect x="36" y="34" width="8" height="4" fill="#B22222"/>
-  <rect x="24" y="42" width="5" height="8" fill="#8B0000"/>
-  <rect x="35" y="42" width="5" height="8" fill="#8B0000"/>
-  <path d="M 16 26 L 12 22 L 10 28 L 8 24" stroke="#FF4500" stroke-width="2"/>
-  <path d="M 48 26 L 52 22 L 54 28 L 56 24" stroke="#FF4500" stroke-width="2"/>
-  <circle cx="12" cy="24" r="3" fill="#FFA500" opacity="0.5"/>
-  <circle cx="52" cy="24" r="3" fill="#FFA500" opacity="0.5"/>
+  <defs>
+    <linearGradient id="valkHair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700"/>
+      <stop offset="100%" style="stop-color:#FFA500"/>
+    </linearGradient>
+    <linearGradient id="valkArmor" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6347"/>
+      <stop offset="50%" style="stop-color:#DC143C"/>
+      <stop offset="100%" style="stop-color:#8B0000"/>
+    </linearGradient>
+    <radialGradient id="shockwave" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFA500;stop-opacity:0.8"/>
+      <stop offset="50%" style="stop-color:#FF4500;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#FF0000;stop-opacity:0.1"/>
+    </radialGradient>
+    <filter id="shadow"><feDropShadow dx="2" dy="4" stdDeviation="3" flood-opacity="0.5"/></filter>
+    <filter id="roar"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <ellipse cx="32" cy="58" rx="20" ry="4" fill="#000" opacity="0.4"/>
+  <rect x="26" y="30" width="12" height="14" fill="url(#valkArmor)" filter="url(#shadow)"/>
+  <rect x="20" y="34" width="8" height="4" fill="#B22222" filter="url(#shadow)"/>
+  <rect x="36" y="34" width="8" height="4" fill="#B22222" filter="url(#shadow)"/>
+  <circle cx="32" cy="24" r="8" fill="#FFE4B5" filter="url(#shadow)"/>
+  <circle cx="30" cy="22" r="2" fill="#000"/>
+  <circle cx="34" cy="22" r="2" fill="#000"/>
+  <ellipse cx="32" cy="27" rx="4" ry="5" fill="#8B0000"/>
+  <path d="M 24 20 Q 26 14 32 14 Q 38 14 40 20" fill="url(#valkHair)" filter="url(#shadow)"/>
+  <path d="M 24 18 L 26 12 L 28 18 M 36 18 L 38 12 L 40 18" fill="url(#valkHair)"/>
+  <rect x="24" y="42" width="5" height="8" fill="#8B0000" filter="url(#shadow)"/>
+  <rect x="35" y="42" width="5" height="8" fill="#8B0000" filter="url(#shadow)"/>
+  <circle cx="12" cy="24" r="6" fill="url(#shockwave)" filter="url(#roar)"/>
+  <circle cx="52" cy="24" r="6" fill="url(#shockwave)" filter="url(#roar)"/>
+  <path d="M 16 26 L 12 22 L 10 28 L 8 24" stroke="#FF4500" stroke-width="2.5" filter="url(#roar)"/>
+  <path d="M 48 26 L 52 22 L 54 28 L 56 24" stroke="#FF4500" stroke-width="2.5" filter="url(#roar)"/>
+  <circle cx="10" cy="24" r="3" fill="#FFA500" opacity="0.7" filter="url(#roar)"/>
+  <circle cx="54" cy="24" r="3" fill="#FFA500" opacity="0.7" filter="url(#roar)"/>
+  <ellipse cx="24" cy="26" rx="2" ry="3" fill="#FF6B6B" opacity="0.5"/>
+  <ellipse cx="40" cy="26" rx="2" ry="3" fill="#FF6B6B" opacity="0.5"/>
 </svg>
